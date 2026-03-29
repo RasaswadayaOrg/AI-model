@@ -1,101 +1,201 @@
-user_id,name,city,interests,moods,language,art_interests,genres
-U0000,User_0,colombo,"['dance', 'music', 'drama']","['energetic', 'engaging']",english,"['dance', 'music', 'drama']","['political_theatre', 'rock']"
-U0001,User_1,galle,"['dance', 'film', 'drama']","['energetic', 'engaging']",sinhala,"['dance', 'film', 'drama']","['comedy', 'fusion', 'immersive_theatre']"
-U0002,User_2,kandy,['drama'],"['engaging', 'energetic']",sinhala,['drama'],"['historical', 'contemporary', 'sinhala_rap', 'tamil_classical', 'alternative_rock']"
-U0003,User_3,jaffna,['music'],"['engaging', 'energetic']",english,['music'],"['sinhala_commercial', 'documentary', 'biographical']"
-U0004,User_4,matara,['music'],"['engaging', 'energetic']",sinhala,['music'],"['sinhala_rap', 'baila', 'rock', 'film_songs']"
-U0005,User_5,kurunegala,"['dance', 'drama', 'music']","['engaging', 'energetic']",sinhala,"['dance', 'drama', 'music']","['pop', 'ballads', 'baila']"
-U0006,User_6,nuwara_eliya,"['drama', 'music', 'dance']","['energetic', 'engaging']",english,"['drama', 'music', 'dance']","['film_songs', 'kandyan_dance', 'social_drama', 'drama']"
-U0007,User_7,badulla,['film'],"['energetic', 'engaging']",sinhala,['film'],"['immersive_theatre', 'kandyan_dance']"
-U0008,User_8,gampaha,['drama'],"['engaging', 'energetic']",sinhala,['drama'],"['kandyan_dance', 'pop', 'hip_hop', 'comedy']"
-U0009,User_9,colombo,"['film', 'dance', 'music']","['engaging', 'energetic']",english,"['film', 'dance', 'music']","['ballads', 'classical_semi_classical', 'historical', 'tamil_folk']"
-U0010,User_10,galle,"['film', 'dance', 'drama']","['engaging', 'energetic']",sinhala,"['film', 'dance', 'drama']","['biography', 'comedy', 'rock', 'hip_hop']"
-U0011,User_11,kandy,"['film', 'music', 'drama']","['engaging', 'energetic']",sinhala,"['film', 'music', 'drama']","['biography', 'fusion', 'folk']"
-U0012,User_12,jaffna,['dance'],"['energetic', 'engaging']",english,['dance'],"['immersive_theatre', 'ballads', 'experimental', 'film_songs', 'fusion']"
-U0013,User_13,matara,"['dance', 'film']","['energetic', 'engaging']",sinhala,"['dance', 'film']","['biographical', 'devotional_religious', 'family_drama', 'classical_ballet']"
-U0014,User_14,kurunegala,"['dance', 'film']","['engaging', 'energetic']",sinhala,"['dance', 'film']","['tamil_classical', 'kandyan_dance']"
-U0015,User_15,nuwara_eliya,"['drama', 'dance']","['energetic', 'engaging']",english,"['drama', 'dance']","['folk', 'alternative_rock', 'biographical', 'drama']"
-U0016,User_16,badulla,"['drama', 'dance']","['energetic', 'engaging']",sinhala,"['drama', 'dance']","['social_drama', 'ballads', 'sinhala_commercial', 'hip_hop', 'biography']"
-U0017,User_17,gampaha,['music'],"['energetic', 'engaging']",sinhala,['music'],"['classical_semi_classical', 'hip_hop', 'sinhala_commercial', 'rock', 'pop']"
-U0018,User_18,colombo,['film'],"['engaging', 'energetic']",english,['film'],"['biographical', 'comedy', 'ballads', 'documentary', 'alternative_rock']"
-U0019,User_19,galle,"['drama', 'film', 'dance']","['energetic', 'engaging']",sinhala,"['drama', 'film', 'dance']","['ballads', 'tamil_folk', 'baila']"
-U0020,User_20,kandy,"['dance', 'film']","['engaging', 'energetic']",sinhala,"['dance', 'film']","['hip_hop', 'biography', 'rock']"
-U0021,User_21,jaffna,"['music', 'dance', 'drama']","['energetic', 'engaging']",english,"['music', 'dance', 'drama']","['political_theatre', 'family_drama']"
-U0022,User_22,matara,"['music', 'drama']","['energetic', 'engaging']",sinhala,"['music', 'drama']","['experimental', 'rock']"
-U0023,User_23,kurunegala,"['dance', 'music']","['energetic', 'engaging']",sinhala,"['dance', 'music']","['family_drama', 'classical_ballet', 'contemporary']"
-U0024,User_24,nuwara_eliya,"['drama', 'dance']","['energetic', 'engaging']",english,"['drama', 'dance']","['ballads', 'sinhala_commercial']"
-U0025,User_25,badulla,['drama'],"['engaging', 'energetic']",sinhala,['drama'],"['tamil_classical', 'experimental', 'tamil_folk']"
-U0026,User_26,gampaha,['drama'],"['energetic', 'engaging']",sinhala,['drama'],"['sinhala_rap', 'film_songs', 'devotional_religious', 'family_drama']"
-U0027,User_27,colombo,"['music', 'dance', 'film']","['energetic', 'engaging']",english,"['music', 'dance', 'film']","['rock', 'documentary']"
-U0028,User_28,galle,['dance'],"['engaging', 'energetic']",sinhala,['dance'],"['fusion', 'ballads']"
-U0029,User_29,kandy,['dance'],"['energetic', 'engaging']",sinhala,['dance'],"['biographical', 'tamil_folk', 'historical', 'comedy', 'immersive_theatre']"
-U0030,User_30,jaffna,['dance'],"['engaging', 'energetic']",english,['dance'],"['political_theatre', 'pop', 'documentary']"
-U0031,User_31,matara,['film'],"['energetic', 'engaging']",sinhala,['film'],"['documentary', 'sinhala_commercial', 'ballads', 'alternative_rock', 'film_songs']"
-U0032,User_32,kurunegala,"['dance', 'music', 'film']","['engaging', 'energetic']",sinhala,"['dance', 'music', 'film']","['tamil_folk', 'ballads', 'comedy', 'drama']"
-U0033,User_33,nuwara_eliya,"['drama', 'music']","['engaging', 'energetic']",english,"['drama', 'music']","['political_theatre', 'biographical', 'tamil_folk', 'biography']"
-U0034,User_34,badulla,"['dance', 'music']","['energetic', 'engaging']",sinhala,"['dance', 'music']","['immersive_theatre', 'classical_semi_classical', 'pop', 'documentary']"
-U0035,User_35,gampaha,['film'],"['engaging', 'energetic']",sinhala,['film'],"['ballads', 'kandyan_dance']"
-U0036,User_36,colombo,"['film', 'dance']","['engaging', 'energetic']",english,"['film', 'dance']","['classical_ballet', 'rock', 'film_songs', 'hip_hop']"
-U0037,User_37,galle,"['music', 'film', 'dance']","['energetic', 'engaging']",sinhala,"['music', 'film', 'dance']","['social_drama', 'drama']"
-U0038,User_38,kandy,"['drama', 'music', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'music', 'dance']","['tamil_folk', 'drama']"
-U0039,User_39,jaffna,['drama'],"['energetic', 'engaging']",english,['drama'],"['immersive_theatre', 'rock', 'biography', 'comedy', 'tamil_classical']"
-U0040,User_40,matara,['drama'],"['energetic', 'engaging']",sinhala,['drama'],"['sinhala_rap', 'family_drama', 'political_theatre', 'tamil_classical']"
-U0041,User_41,kurunegala,"['drama', 'music', 'dance']","['energetic', 'engaging']",sinhala,"['drama', 'music', 'dance']","['tamil_classical', 'folk']"
-U0042,User_42,nuwara_eliya,['drama'],"['engaging', 'energetic']",english,['drama'],"['comedy', 'alternative_rock', 'political_theatre']"
-U0043,User_43,badulla,['music'],"['engaging', 'energetic']",sinhala,['music'],"['drama', 'kandyan_dance', 'fusion', 'experimental']"
-U0044,User_44,gampaha,"['film', 'dance', 'music']","['energetic', 'engaging']",sinhala,"['film', 'dance', 'music']","['biographical', 'immersive_theatre']"
-U0045,User_45,colombo,"['film', 'music']","['engaging', 'energetic']",english,"['film', 'music']","['tamil_folk', 'historical', 'classical_semi_classical', 'contemporary', 'baila']"
-U0046,User_46,galle,"['music', 'dance', 'film']","['engaging', 'energetic']",sinhala,"['music', 'dance', 'film']","['immersive_theatre', 'documentary', 'political_theatre', 'tamil_classical']"
-U0047,User_47,kandy,['film'],"['engaging', 'energetic']",sinhala,['film'],"['experimental', 'pop', 'devotional_religious', 'hip_hop']"
-U0048,User_48,jaffna,['drama'],"['engaging', 'energetic']",english,['drama'],"['experimental', 'hip_hop', 'social_drama', 'alternative_rock']"
-U0049,User_49,matara,"['film', 'dance']","['engaging', 'energetic']",sinhala,"['film', 'dance']","['film_songs', 'political_theatre', 'classical_semi_classical', 'fusion', 'folk']"
-U0050,User_50,kurunegala,"['drama', 'film', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'film', 'dance']","['political_theatre', 'devotional_religious', 'comedy']"
-U0051,User_51,nuwara_eliya,['drama'],"['energetic', 'engaging']",english,['drama'],"['immersive_theatre', 'tamil_classical', 'sinhala_commercial', 'ballads', 'film_songs']"
-U0052,User_52,badulla,"['drama', 'film']","['engaging', 'energetic']",sinhala,"['drama', 'film']","['comedy', 'biography', 'kandyan_dance', 'pop', 'alternative_rock']"
-U0053,User_53,gampaha,['music'],"['energetic', 'engaging']",sinhala,['music'],"['hip_hop', 'comedy']"
-U0054,User_54,colombo,['music'],"['engaging', 'energetic']",english,['music'],"['immersive_theatre', 'social_drama', 'rock', 'tamil_folk', 'fusion']"
-U0055,User_55,galle,"['music', 'dance']","['engaging', 'energetic']",sinhala,"['music', 'dance']","['sinhala_commercial', 'comedy', 'social_drama', 'kandyan_dance']"
-U0056,User_56,kandy,"['music', 'film']","['engaging', 'energetic']",sinhala,"['music', 'film']","['pop', 'devotional_religious']"
-U0057,User_57,jaffna,['film'],"['engaging', 'energetic']",english,['film'],"['biography', 'comedy', 'experimental']"
-U0058,User_58,matara,"['drama', 'film', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'film', 'dance']","['hip_hop', 'film_songs', 'family_drama', 'baila']"
-U0059,User_59,kurunegala,['music'],"['energetic', 'engaging']",sinhala,['music'],"['alternative_rock', 'drama', 'devotional_religious', 'sinhala_commercial', 'experimental']"
-U0060,User_60,nuwara_eliya,"['drama', 'music']","['engaging', 'energetic']",english,"['drama', 'music']","['alternative_rock', 'experimental', 'documentary', 'political_theatre', 'sinhala_rap']"
-U0061,User_61,badulla,"['drama', 'music']","['energetic', 'engaging']",sinhala,"['drama', 'music']","['ballads', 'kandyan_dance']"
-U0062,User_62,gampaha,"['drama', 'music']","['energetic', 'engaging']",sinhala,"['drama', 'music']","['documentary', 'classical_semi_classical', 'film_songs', 'sinhala_commercial', 'tamil_folk']"
-U0063,User_63,colombo,"['film', 'drama']","['energetic', 'engaging']",english,"['film', 'drama']","['rock', 'hip_hop']"
-U0064,User_64,galle,['film'],"['energetic', 'engaging']",sinhala,['film'],"['comedy', 'classical_semi_classical']"
-U0065,User_65,kandy,['drama'],"['energetic', 'engaging']",sinhala,['drama'],"['historical', 'classical_semi_classical']"
-U0066,User_66,jaffna,"['film', 'drama']","['energetic', 'engaging']",english,"['film', 'drama']","['biographical', 'historical', 'alternative_rock', 'devotional_religious']"
-U0067,User_67,matara,"['music', 'drama', 'dance']","['energetic', 'engaging']",sinhala,"['music', 'drama', 'dance']","['tamil_classical', 'political_theatre', 'immersive_theatre', 'sinhala_rap']"
-U0068,User_68,kurunegala,['dance'],"['engaging', 'energetic']",sinhala,['dance'],"['fusion', 'kandyan_dance']"
-U0069,User_69,nuwara_eliya,"['dance', 'drama']","['energetic', 'engaging']",english,"['dance', 'drama']","['kandyan_dance', 'tamil_folk', 'social_drama', 'film_songs']"
-U0070,User_70,badulla,"['drama', 'music', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'music', 'dance']","['family_drama', 'social_drama', 'rock', 'historical', 'contemporary']"
-U0071,User_71,gampaha,"['drama', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'dance']","['historical', 'immersive_theatre', 'political_theatre', 'experimental', 'documentary']"
-U0072,User_72,colombo,['music'],"['energetic', 'engaging']",english,['music'],"['drama', 'sinhala_rap', 'contemporary']"
-U0073,User_73,galle,"['film', 'music']","['engaging', 'energetic']",sinhala,"['film', 'music']","['ballads', 'comedy', 'rock']"
-U0074,User_74,kandy,"['music', 'film']","['engaging', 'energetic']",sinhala,"['music', 'film']","['sinhala_rap', 'alternative_rock', 'ballads', 'devotional_religious', 'comedy']"
-U0075,User_75,jaffna,"['drama', 'music']","['engaging', 'energetic']",english,"['drama', 'music']","['family_drama', 'rock', 'hip_hop', 'documentary']"
-U0076,User_76,matara,"['music', 'drama']","['engaging', 'energetic']",sinhala,"['music', 'drama']","['rock', 'classical_semi_classical']"
-U0077,User_77,kurunegala,"['dance', 'film']","['energetic', 'engaging']",sinhala,"['dance', 'film']","['rock', 'folk', 'contemporary']"
-U0078,User_78,nuwara_eliya,"['film', 'dance', 'music']","['energetic', 'engaging']",english,"['film', 'dance', 'music']","['devotional_religious', 'alternative_rock', 'pop']"
-U0079,User_79,badulla,"['drama', 'music', 'dance']","['engaging', 'energetic']",sinhala,"['drama', 'music', 'dance']","['biographical', 'tamil_classical', 'alternative_rock', 'historical', 'devotional_religious']"
-U0080,User_80,gampaha,"['music', 'drama']","['energetic', 'engaging']",sinhala,"['music', 'drama']","['tamil_classical', 'folk', 'biographical', 'social_drama']"
-U0081,User_81,colombo,['music'],"['energetic', 'engaging']",english,['music'],"['biography', 'sinhala_rap', 'historical']"
-U0082,User_82,galle,"['dance', 'music']","['engaging', 'energetic']",sinhala,"['dance', 'music']","['film_songs', 'devotional_religious', 'tamil_classical', 'historical', 'family_drama']"
-U0083,User_83,kandy,"['dance', 'film']","['energetic', 'engaging']",sinhala,"['dance', 'film']","['contemporary', 'political_theatre', 'ballads']"
-U0084,User_84,jaffna,['drama'],"['energetic', 'engaging']",english,['drama'],"['family_drama', 'film_songs']"
-U0085,User_85,matara,"['music', 'drama', 'dance']","['engaging', 'energetic']",sinhala,"['music', 'drama', 'dance']","['ballads', 'political_theatre', 'comedy', 'contemporary', 'sinhala_rap']"
-U0086,User_86,kurunegala,"['drama', 'music', 'dance']","['energetic', 'engaging']",sinhala,"['drama', 'music', 'dance']","['social_drama', 'biography', 'ballads', 'baila']"
-U0087,User_87,nuwara_eliya,['film'],"['engaging', 'energetic']",english,['film'],"['film_songs', 'pop']"
-U0088,User_88,badulla,"['music', 'drama']","['engaging', 'energetic']",sinhala,"['music', 'drama']","['immersive_theatre', 'baila']"
-U0089,User_89,gampaha,"['film', 'music']","['energetic', 'engaging']",sinhala,"['film', 'music']","['political_theatre', 'social_drama', 'tamil_classical']"
-U0090,User_90,colombo,"['dance', 'film', 'drama']","['energetic', 'engaging']",english,"['dance', 'film', 'drama']","['fusion', 'kandyan_dance', 'film_songs', 'contemporary', 'classical_ballet']"
-U0091,User_91,galle,"['music', 'film', 'drama']","['engaging', 'energetic']",sinhala,"['music', 'film', 'drama']","['documentary', 'political_theatre', 'biographical', 'tamil_classical', 'classical_ballet']"
-U0092,User_92,kandy,"['music', 'film']","['engaging', 'energetic']",sinhala,"['music', 'film']","['film_songs', 'ballads']"
-U0093,User_93,jaffna,"['film', 'drama']","['engaging', 'energetic']",english,"['film', 'drama']","['family_drama', 'baila', 'classical_semi_classical', 'fusion', 'drama']"
-U0094,User_94,matara,"['music', 'film', 'drama']","['energetic', 'engaging']",sinhala,"['music', 'film', 'drama']","['devotional_religious', 'film_songs', 'tamil_folk']"
-U0095,User_95,kurunegala,"['music', 'dance', 'film']","['energetic', 'engaging']",sinhala,"['music', 'dance', 'film']","['hip_hop', 'alternative_rock', 'family_drama', 'ballads']"
-U0096,User_96,nuwara_eliya,['dance'],"['energetic', 'engaging']",english,['dance'],"['pop', 'devotional_religious', 'fusion', 'contemporary', 'family_drama']"
-U0097,User_97,badulla,"['music', 'dance']","['energetic', 'engaging']",sinhala,"['music', 'dance']","['immersive_theatre', 'fusion', 'rock']"
-U0098,User_98,gampaha,['dance'],"['engaging', 'energetic']",sinhala,['dance'],"['social_drama', 'alternative_rock', 'devotional_religious', 'rock']"
-U0099,User_99,colombo,"['music', 'dance']","['engaging', 'energetic']",english,"['music', 'dance']","['hip_hop', 'sinhala_commercial', 'experimental', 'film_songs']"
+user_id,name,city,art_interests,genres,interests,moods,language
+U0000,Nuwan Wickremasinghe,nuwara_eliya,['music'],['contemporary'],['music'],"['patriotic', 'intense']",sinhala
+U0001,Anusha Herath,chilaw,"['drama', 'music']","['contemporary', 'fusion']","['drama', 'music']","['suspenseful', 'theatrical']",sinhala
+U0002,Sachini Perera,jaffna,['film'],"['fusion', 'contemporary']",['film'],"['inspirational', 'empowerment', 'peaceful', 'psychological']",sinhala
+U0003,Madhavi Herath,kalutara,['dance'],"['fusion', 'fusion']",['dance'],"['empowerment', 'national_pride']",sinhala
+U0004,Tharindu Ranasinghe,galle,"['music', 'film']",['contemporary'],"['music', 'film']","['suspenseful', 'competitive']",sinhala
+U0005,Priya Pathirana,monaragala,"['dance', 'music']","['contemporary', 'traditional']","['dance', 'music']","['religious_reverence', 'ritualistic', 'comic_relief', 'dramatic_ballad']",sinhala
+U0006,Danushka Wickremasinghe,badulla,"['film', 'drama']","['fusion', 'contemporary']","['film', 'drama']","['serious', 'social_critique']",sinhala
+U0007,Thiru Weerasinghe,anuradhapura,['music'],"['contemporary', 'fusion']",['music'],"['festive', 'psychological', 'spiritual', 'hopeful']",tamil
+U0008,Senthil Jayasuriya,matara,['drama'],['fusion'],['drama'],"['spiritual_trance', 'satirical', 'tense', 'emotional']",tamil
+U0009,Ravi Wijesinghe,ambalangoda,"['music', 'film']","['contemporary', 'traditional']","['music', 'film']","['social_awareness', 'mythological', 'melancholic']",tamil
+U0010,Nadeeka Liyanage,trincomalee,"['dance', 'music']","['fusion', 'traditional']","['dance', 'music']","['theatrical', 'ritualistic', 'inspirational_biographical', 'powerful']",english
+U0011,Nishani Selvam,batticaloa,['dance'],['traditional'],['dance'],"['psychological', 'heroic']",english
+U0012,Roshan Wickremasinghe,kalutara,"['film', 'music', 'drama']","['contemporary', 'traditional']","['film', 'music', 'drama']","['suspense', 'traditional']",sinhala
+U0013,Angelo Sivarajah,kilinochchi,['music'],['traditional'],['music'],"['danceable', 'emotional', 'traditional', 'aggressive']",sinhala
+U0014,Thilini Selvam,nuwara_eliya,"['music', 'dance', 'drama']",['contemporary'],"['music', 'dance', 'drama']","['spiritual', 'intense', 'mythological', 'fearful']",sinhala
+U0015,Nadeesha Mendis,jaffna,['drama'],"['fusion', 'contemporary']",['drama'],"['theatrical', 'romantic_longing', 'mysterious']",sinhala
+U0016,Siva Liyanage,ampara,['film'],['traditional'],['film'],"['satirical', 'war_tension', 'suspenseful']",english
+U0017,Thilini Jayawardena,kalutara,"['dance', 'drama']",['fusion'],"['dance', 'drama']","['traditional', 'energetic', 'peaceful', 'rhythmic']",sinhala
+U0018,Danushka Ranasinghe,polonnaruwa,['film'],"['traditional', 'contemporary']",['film'],"['religious_reverence', 'joyful', 'spiritual']",sinhala
+U0019,Chathurika Amarasinghe,matale,"['dance', 'drama']",['fusion'],"['dance', 'drama']","['rural_village', 'suspenseful', 'graceful']",english
+U0020,Chandima Ranasinghe,kegalle,"['music', 'drama']","['traditional', 'traditional']","['music', 'drama']","['mysterious', 'cultural_pride', 'rural_village', 'uplifting']",sinhala
+U0021,Danushka Gunasekara,gampaha,['drama'],"['traditional', 'contemporary']",['drama'],"['spiritual_trance', 'suspenseful']",sinhala
+U0022,Anusha Jayasuriya,kalutara,"['dance', 'film', 'music']","['contemporary', 'traditional']","['dance', 'film', 'music']","['energetic', 'social_awareness']",sinhala
+U0023,Nirmala Ranasinghe,negombo,['drama'],['fusion'],['drama'],"['suspenseful', 'tense']",tamil
+U0024,Sachini Weerasinghe,anuradhapura,"['dance', 'drama', 'music']",['contemporary'],"['dance', 'drama', 'music']","['suspense', 'ceremonial']",sinhala
+U0025,Priya Fernando,anuradhapura,['film'],"['fusion', 'fusion']",['film'],"['chill', 'social_critique', 'fusion_energy']",sinhala
+U0026,Nuwan Samaraweera,galle,['film'],['traditional'],['film'],"['chill', 'religious_reverence', 'expressive']",sinhala
+U0027,Gayan Gunasekara,gampaha,"['music', 'film']",['contemporary'],"['music', 'film']","['party', 'religious_reverence']",sinhala
+U0028,Nalaka Ranasinghe,kilinochchi,['film'],['traditional'],['film'],"['empowerment', 'tense', 'political_awareness', 'fusion_energy']",sinhala
+U0029,Ravi Weerasinghe,kurunegala,"['film', 'dance']","['contemporary', 'traditional']","['film', 'dance']","['fearful', 'peaceful', 'rural_village']",sinhala
+U0030,Lasith Ranasinghe,matara,['dance'],['traditional'],['dance'],"['suspense', 'joyful']",sinhala
+U0031,Samanthi De Silva,jaffna,['music'],['contemporary'],['music'],"['tense', 'political_intensity']",sinhala
+U0032,Sanduni Wijesinghe,ratnapura,['film'],"['contemporary', 'contemporary']",['film'],"['theatrical', 'psychological', 'fierce', 'suspenseful']",sinhala
+U0033,Amila Ekanayake,monaragala,"['dance', 'drama']","['traditional', 'traditional']","['dance', 'drama']","['party', 'religious_reverence', 'inspirational_biographical']",sinhala
+U0034,Ajith Herath,matale,['drama'],"['contemporary', 'contemporary']",['drama'],"['rhythmic', 'meditative']",sinhala
+U0035,Chaminda Rathnayake,monaragala,"['drama', 'music']","['traditional', 'contemporary']","['drama', 'music']","['tragic', 'inspirational_biographical', 'ceremonial']",english
+U0036,Nuwan Kumar,anuradhapura,"['drama', 'film']",['fusion'],"['drama', 'film']","['tragic', 'patriotic']",sinhala
+U0037,Nuwan Senanayake,kilinochchi,['drama'],['traditional'],['drama'],"['historical_nostalgia', 'ritualistic', 'sacred']",sinhala
+U0038,Kavinda Pathirana,kalutara,['music'],"['traditional', 'traditional']",['music'],"['energetic', 'patriotic', 'traditional', 'powerful']",sinhala
+U0039,Dilini Ranasinghe,negombo,"['dance', 'drama']","['contemporary', 'traditional']","['dance', 'drama']","['hopeful', 'suspenseful', 'social_awareness', 'emotional']",sinhala
+U0040,Isuru Herath,matale,['dance'],['contemporary'],['dance'],"['inspirational', 'energetic', 'chill']",sinhala
+U0041,Chandima Fernando,kilinochchi,"['music', 'dance']","['contemporary', 'fusion']","['music', 'dance']","['mysterious', 'expressive', 'tense', 'political_intensity']",sinhala
+U0042,Chathura Selvam,kilinochchi,"['film', 'dance']",['fusion'],"['film', 'dance']","['national_pride', 'fierce']",sinhala
+U0043,Dinesh Kumar,colombo,['film'],['contemporary'],['film'],"['spiritual_trance', 'danceable', 'national_pride']",sinhala
+U0044,Hashini Perera,nuwara_eliya,"['drama', 'film']",['contemporary'],"['drama', 'film']","['romantic_longing', 'fierce', 'devotional', 'intense']",sinhala
+U0045,Nalaka De Silva,ampara,"['drama', 'film']","['contemporary', 'contemporary']","['drama', 'film']","['festive', 'heroic', 'inspirational']",sinhala
+U0046,Chathura Rajapaksa,matale,"['film', 'drama']","['fusion', 'fusion']","['film', 'drama']","['heroic', 'love_longing', 'tense']",sinhala
+U0047,Chaminda Amarasinghe,matara,"['dance', 'film']","['traditional', 'traditional']","['dance', 'film']","['suspense', 'thriller_tension', 'graceful']",sinhala
+U0048,Ruwan Pathirana,kalutara,['music'],['traditional'],['music'],"['political_awareness', 'peaceful', 'traditional', 'inspirational']",sinhala
+U0049,Vindya Ekanayake,batticaloa,['drama'],"['fusion', 'fusion']",['drama'],"['melancholic', 'dramatic', 'uplifting']",sinhala
+U0050,Nadeeka Mendis,ampara,['music'],"['contemporary', 'contemporary']",['music'],"['romantic', 'heroic', 'rural_village']",sinhala
+U0051,Priya Weerasinghe,ratnapura,"['dance', 'drama']",['contemporary'],"['dance', 'drama']","['mysterious', 'cultural_pride', 'dark', 'joyful']",sinhala
+U0052,Gayan Selvam,negombo,['film'],"['fusion', 'contemporary']",['film'],"['graceful', 'peaceful', 'energetic']",sinhala
+U0053,Nuwan Wickremasinghe,anuradhapura,"['music', 'film']","['contemporary', 'contemporary']","['music', 'film']","['suspense', 'political_intensity']",sinhala
+U0054,Sandani Senanayake,kegalle,['music'],"['contemporary', 'contemporary']",['music'],"['emotional', 'suspenseful', 'party', 'rebel']",sinhala
+U0055,Nadeesha Selvam,kalutara,['film'],['fusion'],['film'],"['social_critique', 'celebratory', 'inspirational_biographical']",sinhala
+U0056,Madhavi Senanayake,mannar,"['dance', 'drama']",['fusion'],"['dance', 'drama']","['romantic_longing', 'inspirational', 'patriotic']",sinhala
+U0057,Mohan Dissanayake,ampara,['drama'],['traditional'],['drama'],"['competitive', 'inspirational']",tamil
+U0058,Samanthi Gunawardena,polonnaruwa,['drama'],"['traditional', 'contemporary']",['drama'],"['aggressive', 'social_critique', 'serious']",sinhala
+U0059,Vani Kumar,ratnapura,"['music', 'dance']","['fusion', 'contemporary']","['music', 'dance']","['romantic_longing', 'mysterious', 'fierce', 'tragic']",tamil
+U0060,Chathura Selvam,hambantota,"['dance', 'film', 'drama']",['fusion'],"['dance', 'film', 'drama']","['energetic', 'religious_reverence', 'suspense']",sinhala
+U0061,Dinesh De Silva,gampaha,['film'],['fusion'],['film'],"['dramatic', 'war_tension', 'sacred']",sinhala
+U0062,Chandima Perera,trincomalee,"['film', 'dance']","['contemporary', 'fusion']","['film', 'dance']","['tragic', 'empowerment', 'religious_reverence', 'romantic_longing']",sinhala
+U0063,Amila Wickremasinghe,badulla,['music'],['contemporary'],['music'],"['political_awareness', 'patriotic', 'energetic', 'historical_nostalgia']",sinhala
+U0064,Yashodha Wickremasinghe,batticaloa,['dance'],['traditional'],['dance'],"['empowerment', 'mythological', 'comic_relief', 'dark']",sinhala
+U0065,Danushka Samaraweera,ratnapura,['film'],['traditional'],['film'],"['political_awareness', 'theatrical', 'festive']",sinhala
+U0066,Isuru Jayasuriya,nuwara_eliya,['film'],"['fusion', 'traditional']",['film'],"['dramatic_ballad', 'national_pride', 'spiritual', 'reflective']",sinhala
+U0067,Mala Jayawardena,ratnapura,['dance'],"['contemporary', 'contemporary']",['dance'],"['serious', 'dramatic', 'energetic', 'social_awareness']",tamil
+U0068,Lahiru Perera,matara,['drama'],['traditional'],['drama'],"['love_longing', 'war_tension', 'satirical', 'cultural_pride']",sinhala
+U0069,Vijay Weerasinghe,matara,"['film', 'music']","['fusion', 'traditional']","['film', 'music']","['dramatic_ballad', 'love_longing']",english
+U0070,Chathura Selvam,ambalangoda,"['film', 'drama']","['fusion', 'fusion']","['film', 'drama']","['heroic', 'suspense']",sinhala
+U0071,Vindya Senanayake,kalutara,"['drama', 'film']","['contemporary', 'traditional']","['drama', 'film']","['romantic', 'political_awareness']",sinhala
+U0072,Chathura Nadarajah,mannar,['drama'],['fusion'],['drama'],"['dramatic', 'romantic_longing', 'rebel', 'national_pride']",sinhala
+U0073,Damith Rathnayake,ambalangoda,['film'],"['traditional', 'traditional']",['film'],"['sacred', 'intense']",sinhala
+U0074,Nuwan Weerasinghe,hambantota,['dance'],['traditional'],['dance'],"['uplifting', 'ritualistic', 'heroic', 'party']",sinhala
+U0075,Chathurika Amarasinghe,galle,"['music', 'film']",['traditional'],"['music', 'film']","['mythological', 'historical_nostalgia', 'devotional']",sinhala
+U0076,Kavinda Liyanage,kalutara,['film'],['contemporary'],['film'],"['energetic', 'political_intensity']",sinhala
+U0077,Sanduni De Silva,jaffna,['music'],"['contemporary', 'contemporary']",['music'],"['historical_nostalgia', 'dark']",english
+U0078,Sandani Nadarajah,puttalam,"['drama', 'film']","['traditional', 'contemporary']","['drama', 'film']","['psychological', 'ritualistic', 'expressive', 'fierce']",sinhala
+U0079,Ayesha Thiyagarajah,badulla,['drama'],"['contemporary', 'contemporary']",['drama'],"['suspense', 'sad']",sinhala
+U0080,Angelo Weerasinghe,panadura,"['film', 'drama']",['contemporary'],"['film', 'drama']","['theatrical', 'reflective', 'rural_village', 'social_awareness']",sinhala
+U0081,Chathurika Wickremasinghe,negombo,['film'],['contemporary'],['film'],"['ceremonial', 'theatrical', 'patriotic', 'cultural_pride']",sinhala
+U0082,Nalaka Sivarajah,colombo,['dance'],"['traditional', 'contemporary']",['dance'],"['intense', 'war_tension']",sinhala
+U0083,Nadeeka Dissanayake,badulla,['music'],['traditional'],['music'],"['reflective', 'peaceful', 'cultural_pride', 'graceful']",sinhala
+U0084,Kavinda Rajapaksa,monaragala,"['film', 'dance']",['traditional'],"['film', 'dance']","['romantic_longing', 'war_tension', 'social_awareness', 'energetic']",sinhala
+U0085,Ravi Rajapaksa,monaragala,['film'],"['contemporary', 'traditional']",['film'],"['expressive', 'tense', 'motivational', 'empowerment']",sinhala
+U0086,Dinesh Perera,jaffna,"['music', 'dance', 'drama']","['fusion', 'fusion']","['music', 'dance', 'drama']","['theatrical', 'fusion_energy', 'rhythmic', 'urban_street']",sinhala
+U0087,Sachini Weerasinghe,puttalam,['film'],['contemporary'],['film'],"['traditional', 'expressive']",english
+U0088,Nalaka Wickremasinghe,hambantota,"['music', 'film']",['contemporary'],"['music', 'film']","['chill', 'dark']",sinhala
+U0089,Thilini Ekanayake,monaragala,"['dance', 'film']","['contemporary', 'contemporary']","['dance', 'film']","['fierce', 'historical_nostalgia', 'religious_reverence', 'mysterious']",sinhala
+U0090,Nalaka Bandara,gampaha,['music'],"['contemporary', 'traditional']",['music'],"['rural_village', 'joyful', 'intense']",sinhala
+U0091,Sandani Selvam,ratnapura,"['dance', 'drama']","['contemporary', 'fusion']","['dance', 'drama']","['emotional', 'danceable', 'peaceful']",sinhala
+U0092,Samanthi Selvam,batticaloa,"['dance', 'drama']","['fusion', 'contemporary']","['dance', 'drama']","['reflective', 'party', 'sad']",sinhala
+U0093,Lakshman Liyanage,anuradhapura,"['dance', 'drama', 'music']",['fusion'],"['dance', 'drama', 'music']","['dramatic_ballad', 'motivational', 'peaceful']",sinhala
+U0094,Sachini Ranasinghe,polonnaruwa,"['music', 'film']","['contemporary', 'traditional']","['music', 'film']","['angry', 'ritualistic', 'danceable']",sinhala
+U0095,Dilini Perera,matara,"['music', 'film']",['contemporary'],"['music', 'film']","['motivational', 'empowerment', 'mysterious', 'suspenseful']",sinhala
+U0096,Muthu Silva,kilinochchi,['dance'],"['contemporary', 'contemporary']",['dance'],"['heroic', 'tragic', 'mythological']",tamil
+U0097,Isuru Sivarajah,anuradhapura,"['drama', 'dance', 'film']","['contemporary', 'contemporary']","['drama', 'dance', 'film']","['powerful', 'serious']",english
+U0098,Madhavi Herath,batticaloa,"['film', 'music', 'drama']","['contemporary', 'contemporary']","['film', 'music', 'drama']","['intense', 'ceremonial', 'fierce']",sinhala
+U0099,Nadeesha Wickremasinghe,jaffna,"['film', 'music', 'drama']","['fusion', 'fusion']","['film', 'music', 'drama']","['party', 'dark', 'serious', 'romantic']",sinhala
+U0100,Dilini Selvam,puttalam,['music'],['traditional'],['music'],"['psychological', 'war_tension']",sinhala
+U0101,Sanduni Wickremasinghe,kilinochchi,"['drama', 'music']",['fusion'],"['drama', 'music']","['tragic', 'devotional', 'social_critique']",sinhala
+U0102,Kasun Wickremasinghe,kurunegala,['music'],"['traditional', 'contemporary']",['music'],"['satirical', 'psychological', 'devotional', 'meditative']",sinhala
+U0103,Madhavi Liyanage,colombo,['music'],"['traditional', 'contemporary']",['music'],"['party', 'serious']",sinhala
+U0104,Chandima Pathirana,monaragala,"['drama', 'film']",['fusion'],"['drama', 'film']","['sacred', 'romantic']",sinhala
+U0105,Rajan Kumara,matara,"['drama', 'dance']",['contemporary'],"['drama', 'dance']","['rural_village', 'acoustic_warm']",tamil
+U0106,Kamala Jayasuriya,ratnapura,['drama'],"['fusion', 'contemporary']",['drama'],"['comic_relief', 'heartbreak']",tamil
+U0107,Lasith Perera,kilinochchi,"['dance', 'film']","['contemporary', 'traditional']","['dance', 'film']","['urban_street', 'social_awareness', 'fierce', 'theatrical']",sinhala
+U0108,Chaminda Jayawardena,kilinochchi,['music'],['contemporary'],['music'],"['love_longing', 'social_critique', 'suspenseful']",sinhala
+U0109,Vasanthi Silva,panadura,['film'],"['contemporary', 'contemporary']",['film'],"['mysterious', 'fierce', 'heartbreak', 'graceful']",tamil
+U0110,Madhavi Kumar,chilaw,['music'],['contemporary'],['music'],"['political_intensity', 'meditative', 'inspirational']",sinhala
+U0111,Ravi Herath,trincomalee,['dance'],['contemporary'],['dance'],"['graceful', 'intense', 'religious_reverence', 'chill']",sinhala
+U0112,Nalaka Herath,polonnaruwa,"['dance', 'drama', 'music']",['fusion'],"['dance', 'drama', 'music']","['mythological', 'comic_relief']",sinhala
+U0113,Ayesha Jayawardena,kalutara,['drama'],"['contemporary', 'contemporary']",['drama'],"['joyful', 'motivational', 'religious_reverence', 'fierce']",sinhala
+U0114,Anusha Ekanayake,panadura,['music'],['contemporary'],['music'],"['fearful', 'suspenseful', 'historical_nostalgia']",sinhala
+U0115,Hashini Rathnayake,kalutara,['film'],['contemporary'],['film'],"['tragic', 'intense', 'satirical', 'fearful']",sinhala
+U0116,Dinesh Pathirana,kurunegala,['music'],['traditional'],['music'],"['spiritual_trance', 'uplifting', 'rhythmic', 'patriotic']",sinhala
+U0117,Chandima De Silva,nuwara_eliya,"['drama', 'dance']","['traditional', 'traditional']","['drama', 'dance']","['rhythmic', 'thriller_tension', 'competitive']",sinhala
+U0118,Samanthi Liyanage,ambalangoda,"['dance', 'drama', 'music']","['traditional', 'traditional']","['dance', 'drama', 'music']","['traditional', 'dark', 'dramatic']",sinhala
+U0119,Vijay Rathnayake,kandy,"['film', 'music']",['contemporary'],"['film', 'music']","['competitive', 'comic_relief', 'social_awareness', 'devotional']",tamil
+U0120,Amila Bandara,ambalangoda,['film'],"['contemporary', 'fusion']",['film'],"['suspense', 'rural_village', 'tragic', 'spiritual']",sinhala
+U0121,Danushka Ekanayake,jaffna,['drama'],['contemporary'],['drama'],"['love_longing', 'psychological']",sinhala
+U0122,Anusha Pathirana,puttalam,"['music', 'drama']",['contemporary'],"['music', 'drama']","['love_longing', 'dark', 'powerful']",sinhala
+U0123,Chaminda Wijesinghe,polonnaruwa,['drama'],"['traditional', 'fusion']",['drama'],"['historical_nostalgia', 'religious_reverence']",sinhala
+U0124,Nalaka Gunawardena,kegalle,"['drama', 'film']","['contemporary', 'traditional']","['drama', 'film']","['hopeful', 'rhythmic', 'social_awareness']",sinhala
+U0125,Ruwan Senanayake,ratnapura,"['dance', 'film', 'music']","['traditional', 'contemporary']","['dance', 'film', 'music']","['empowerment', 'dark', 'traditional', 'romantic']",sinhala
+U0126,Damith Thiyagarajah,panadura,['dance'],"['contemporary', 'contemporary']",['dance'],"['melancholic', 'serious', 'political_intensity']",sinhala
+U0127,Vijay Gunawardena,jaffna,['dance'],"['fusion', 'contemporary']",['dance'],"['spiritual_trance', 'thriller_tension', 'aggressive']",english
+U0128,Priya Ekanayake,matara,"['drama', 'dance']","['contemporary', 'fusion']","['drama', 'dance']","['national_pride', 'rural_village', 'inspirational', 'inspirational_biographical']",sinhala
+U0129,Senthil Dissanayake,gampaha,['music'],"['fusion', 'contemporary']",['music'],"['thriller_tension', 'ritualistic', 'powerful', 'tragic']",tamil
+U0130,Dilini Jayawardena,badulla,"['dance', 'music']",['contemporary'],"['dance', 'music']","['dramatic', 'rebel']",sinhala
+U0131,Dilini Amarasinghe,kandy,['drama'],"['contemporary', 'contemporary']",['drama'],"['historical_nostalgia', 'rural_village', 'melancholic']",sinhala
+U0132,Priya Kumara,kandy,['dance'],['fusion'],['dance'],"['comic_relief', 'angry', 'urban_street']",sinhala
+U0133,Thisara Kumara,hambantota,['drama'],['fusion'],['drama'],"['cultural_pride', 'aggressive', 'hopeful']",sinhala
+U0134,Samanthi Fernando,badulla,['film'],['traditional'],['film'],"['fusion_energy', 'theatrical', 'social_critique', 'historical_nostalgia']",sinhala
+U0135,Dilini Kumar,nuwara_eliya,['drama'],['contemporary'],['drama'],"['party', 'political_awareness', 'spiritual']",sinhala
+U0136,Mahela Selvam,matara,['film'],['contemporary'],['film'],"['heartbreak', 'ceremonial', 'serious']",sinhala
+U0137,Thisara Thiyagarajah,polonnaruwa,"['drama', 'film']",['contemporary'],"['drama', 'film']","['peaceful', 'war_tension', 'fierce', 'love_longing']",sinhala
+U0138,Anusha Bandara,ampara,['film'],"['traditional', 'traditional']",['film'],"['romantic_longing', 'intense', 'social_critique', 'fierce']",sinhala
+U0139,Kavinda Bandara,gampaha,"['film', 'drama']",['contemporary'],"['film', 'drama']","['ritualistic', 'joyful']",sinhala
+U0140,Chathura Kumara,kalutara,"['drama', 'music', 'dance']","['traditional', 'traditional']","['drama', 'music', 'dance']","['rhythmic', 'heartbreak', 'empowerment', 'fierce']",sinhala
+U0141,Malsha Senanayake,ambalangoda,['drama'],['contemporary'],['drama'],"['celebratory', 'devotional']",sinhala
+U0142,Chathura Amarasinghe,jaffna,"['dance', 'drama']","['traditional', 'traditional']","['dance', 'drama']","['hopeful', 'romantic', 'rhythmic', 'devotional']",sinhala
+U0143,Chaminda Jayawardena,anuradhapura,"['music', 'drama']",['contemporary'],"['music', 'drama']","['inspirational_biographical', 'ritualistic']",sinhala
+U0144,Lakshman Pathirana,badulla,"['film', 'music']","['fusion', 'fusion']","['film', 'music']","['ceremonial', 'rebel', 'political_awareness', 'national_pride']",sinhala
+U0145,Muthu Amarasinghe,trincomalee,['film'],"['contemporary', 'contemporary']",['film'],"['rebel', 'mysterious', 'political_awareness']",tamil
+U0146,Priya Rathnayake,polonnaruwa,['drama'],['contemporary'],['drama'],"['war_tension', 'serious', 'meditative']",sinhala
+U0147,Lasith Rathnayake,ambalangoda,['dance'],['traditional'],['dance'],"['energetic', 'joyful', 'aggressive', 'ritualistic']",sinhala
+U0148,Kasun Kumara,matale,"['music', 'film', 'dance']",['contemporary'],"['music', 'film', 'dance']","['uplifting', 'dramatic_ballad', 'mythological', 'psychological']",sinhala
+U0149,Chathura Dissanayake,galle,['drama'],"['traditional', 'fusion']",['drama'],"['religious_reverence', 'uplifting', 'heartbreak']",sinhala
+U0150,Priya Fernando,galle,"['drama', 'dance']",['traditional'],"['drama', 'dance']","['empowerment', 'traditional']",sinhala
+U0151,Malsha Gunasekara,monaragala,"['drama', 'dance']",['contemporary'],"['drama', 'dance']","['fearful', 'serious', 'inspirational_biographical']",english
+U0152,Sanduni Gunawardena,gampaha,"['music', 'film']",['contemporary'],"['music', 'film']","['serious', 'heroic', 'sad']",english
+U0153,Ayesha Silva,puttalam,"['drama', 'film']","['traditional', 'contemporary']","['drama', 'film']","['spiritual', 'devotional', 'war_tension']",sinhala
+U0154,Chaminda Gunawardena,kegalle,"['drama', 'music']",['fusion'],"['drama', 'music']","['mysterious', 'mythological', 'aggressive', 'war_tension']",english
+U0155,Nadeesha Sivarajah,jaffna,['dance'],['traditional'],['dance'],"['romantic', 'intense']",sinhala
+U0156,Mahela Herath,kandy,['drama'],"['contemporary', 'fusion']",['drama'],"['war_tension', 'energetic']",sinhala
+U0157,Chaminda Ranasinghe,galle,"['music', 'drama', 'dance']",['fusion'],"['music', 'drama', 'dance']","['dark', 'dramatic_ballad', 'joyful', 'political_awareness']",sinhala
+U0158,Isuru Nadarajah,monaragala,"['music', 'film']","['traditional', 'contemporary']","['music', 'film']","['danceable', 'dramatic_ballad']",sinhala
+U0159,Saman De Silva,nuwara_eliya,['drama'],"['traditional', 'contemporary']",['drama'],"['peaceful', 'urban_street', 'traditional']",sinhala
+U0160,Isuru Liyanage,jaffna,['music'],['traditional'],['music'],"['graceful', 'love_longing', 'cultural_pride']",sinhala
+U0161,Damith Jayasuriya,colombo,['music'],"['fusion', 'traditional']",['music'],"['meditative', 'peaceful', 'traditional']",sinhala
+U0162,Nadeeka Gunasekara,matara,['dance'],['traditional'],['dance'],"['rhythmic', 'political_awareness', 'thriller_tension']",sinhala
+U0163,Amila Jayawardena,puttalam,['music'],['contemporary'],['music'],"['party', 'empowerment', 'graceful']",sinhala
+U0164,Saman Dissanayake,hambantota,"['dance', 'drama']","['traditional', 'contemporary']","['dance', 'drama']","['urban_street', 'romantic_longing', 'traditional']",english
+U0165,Karthik Jayasuriya,kurunegala,['dance'],['fusion'],['dance'],"['uplifting', 'graceful', 'urban_street']",tamil
+U0166,Meena Ranasinghe,trincomalee,['film'],['traditional'],['film'],"['theatrical', 'empowerment']",tamil
+U0167,Nadeesha Amarasinghe,gampaha,"['film', 'drama']",['traditional'],"['film', 'drama']","['acoustic_warm', 'fearful']",sinhala
+U0168,Chandima Ekanayake,hambantota,"['drama', 'music', 'film']",['traditional'],"['drama', 'music', 'film']","['political_intensity', 'ceremonial', 'fierce', 'heartbreak']",sinhala
+U0169,Chathurika Fernando,trincomalee,['drama'],['traditional'],['drama'],"['dark', 'chill', 'social_awareness', 'danceable']",sinhala
+U0170,Tharindu Jayasuriya,mannar,"['drama', 'dance']",['contemporary'],"['drama', 'dance']","['hopeful', 'devotional', 'danceable', 'emotional']",sinhala
+U0171,Hiruni Gunawardena,kandy,"['film', 'drama']","['fusion', 'traditional']","['film', 'drama']","['angry', 'expressive', 'dramatic_ballad']",english
+U0172,Arun Nadarajah,colombo,"['dance', 'drama']",['contemporary'],"['dance', 'drama']","['angry', 'love_longing', 'historical_nostalgia', 'powerful']",tamil
+U0173,Hiruni Jayawardena,jaffna,"['music', 'dance']","['fusion', 'contemporary']","['music', 'dance']","['political_awareness', 'peaceful', 'serious', 'religious_reverence']",sinhala
+U0174,Madhavi Gunawardena,jaffna,['dance'],"['contemporary', 'contemporary']",['dance'],"['tense', 'fearful', 'romantic_longing', 'rural_village']",sinhala
+U0175,Durga Rathnayake,ambalangoda,"['drama', 'music', 'film']","['fusion', 'contemporary']","['drama', 'music', 'film']","['rebel', 'romantic_longing', 'rhythmic']",tamil
+U0176,Lasith Weerasinghe,monaragala,['music'],"['traditional', 'traditional']",['music'],"['comic_relief', 'psychological', 'social_critique']",sinhala
+U0177,Chathura Amarasinghe,kegalle,"['drama', 'film']",['fusion'],"['drama', 'film']","['traditional', 'political_awareness']",sinhala
+U0178,Tharindu Selvam,negombo,"['dance', 'music']","['fusion', 'contemporary']","['dance', 'music']","['fearful', 'serious', 'uplifting']",sinhala
+U0179,Chathura Jayawardena,ampara,['film'],"['contemporary', 'fusion']",['film'],"['dramatic', 'serious', 'rebel', 'melancholic']",sinhala
+U0180,Dilini Wijesinghe,polonnaruwa,['dance'],"['contemporary', 'contemporary']",['dance'],"['rhythmic', 'empowerment', 'fierce']",sinhala
+U0181,Nishani Herath,ambalangoda,['drama'],"['contemporary', 'fusion']",['drama'],"['intense', 'sacred', 'acoustic_warm', 'sad']",sinhala
+U0182,Yashodha De Silva,galle,['film'],"['contemporary', 'traditional']",['film'],"['danceable', 'reflective', 'energetic']",sinhala
+U0183,Nadeeka Selvam,colombo,"['drama', 'music', 'film']","['traditional', 'fusion']","['drama', 'music', 'film']","['intense', 'love_longing', 'festive']",sinhala
+U0184,Nadeesha Liyanage,polonnaruwa,"['drama', 'film']",['contemporary'],"['drama', 'film']","['ritualistic', 'thriller_tension']",sinhala
+U0185,Malsha Fernando,colombo,"['music', 'dance']",['contemporary'],"['music', 'dance']","['meditative', 'intense']",sinhala
+U0186,Madhavi Wijesinghe,jaffna,"['dance', 'film']",['traditional'],"['dance', 'film']","['spiritual', 'fearful', 'graceful', 'chill']",sinhala
+U0187,Kavinda Rathnayake,matale,['music'],['contemporary'],['music'],"['meditative', 'chill', 'theatrical', 'religious_reverence']",sinhala
+U0188,Lasith Amarasinghe,puttalam,"['film', 'drama']",['fusion'],"['film', 'drama']","['political_awareness', 'uplifting', 'political_intensity', 'social_critique']",sinhala
+U0189,Mahela De Silva,jaffna,['drama'],['contemporary'],['drama'],"['love_longing', 'religious_reverence']",sinhala
+U0190,Chathura Ekanayake,trincomalee,"['music', 'drama', 'film']",['traditional'],"['music', 'drama', 'film']","['melancholic', 'dramatic_ballad']",sinhala
+U0191,Kavinda Herath,jaffna,['dance'],"['traditional', 'traditional']",['dance'],"['mysterious', 'tragic']",sinhala
+U0192,Chandima Dissanayake,polonnaruwa,['dance'],['traditional'],['dance'],"['hopeful', 'sacred', 'melancholic']",sinhala
+U0193,Samanthi Herath,colombo,['film'],"['traditional', 'traditional']",['film'],"['inspirational', 'patriotic', 'party']",sinhala
+U0194,Danushka De Silva,mannar,"['music', 'dance']",['contemporary'],"['music', 'dance']","['emotional', 'hopeful', 'heroic']",sinhala
+U0195,Kasun Silva,trincomalee,['dance'],['fusion'],['dance'],"['psychological', 'rhythmic']",sinhala
+U0196,Lahiru Gunasekara,kegalle,['film'],['contemporary'],['film'],"['tense', 'ceremonial']",sinhala
+U0197,Dilini Samaraweera,mannar,"['film', 'dance', 'music']","['traditional', 'traditional']","['film', 'dance', 'music']","['political_awareness', 'traditional', 'competitive', 'heartbreak']",english
+U0198,Nadeesha Liyanage,ampara,"['dance', 'music']",['fusion'],"['dance', 'music']","['heroic', 'inspirational_biographical']",english
+U0199,Kasun Ekanayake,anuradhapura,['film'],['traditional'],['film'],"['rhythmic', 'romantic_longing']",english

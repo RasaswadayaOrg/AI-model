@@ -115,7 +115,20 @@ def find_similar_users(user_data, dataset, top_k=10):
     Returns: List of (user_dict, similarity_score) tuples
     (NEW - Updated for real artists CSV data)
     """
+    import ast
+    
     similar_users = []
+    
+    # Helper to parse list fields from CSV (string representations)
+    def parse_list(val):
+        if isinstance(val, list):
+            return val
+        if isinstance(val, str) and val:
+            try:
+                return ast.literal_eval(val)
+            except:
+                return [val]
+        return []
     
     # Build follows mapping from dataset
     follows_map = defaultdict(list)
@@ -125,18 +138,24 @@ def find_similar_users(user_data, dataset, top_k=10):
         if user_id and artist_id:
             follows_map[user_id].append(artist_id)
     
+    # Validate input user_data has required fields
+    if 'user_id' not in user_data or not user_data.get('follows'):
+        print(f"WARNING: user_data missing 'follows' field. Collaborative filtering will return empty results.")
+    
     for user in dataset['users']:
         user_id_val = user.get('user_id') if isinstance(user, dict) else user['user_id']
         if str(user_id_val) == str(user_data.get('user_id')):
             continue  # Skip self
         
-        # Build comparable user data
+        # Build comparable user data - PROPERLY PARSE CSV STRING FIELDS
         other_user_data = {
             'user_id': user_id_val,
             'name': user.get('name', ''),
             'city': user.get('city', ''),
-            'interests': [user.get('interests', '')],
-            'moods': [user.get('moods', '')] if user.get('moods') else [],
+            'art_interests': parse_list(user.get('art_interests', [])),  # Parse from CSV string
+            'interests': parse_list(user.get('interests', [])),  # Parse from CSV string
+            'moods': parse_list(user.get('moods', [])),  # Parse from CSV string
+            'genres': parse_list(user.get('genres', [])),  # Parse from CSV string
             'follows': follows_map.get(user_id_val, [])
         }
         
@@ -319,8 +338,21 @@ def get_recommendations(user_data):
     Returns:
         dict with 'artists', 'events', and 'similar_users' lists
     """
+    import ast
+    
     try:
         model, dataset, device = load_model_and_data()
+        
+        # Helper to parse list fields from CSV
+        def parse_list(val):
+            if isinstance(val, list):
+                return val
+            if isinstance(val, str) and val:
+                try:
+                    return ast.literal_eval(val)
+                except:
+                    return [val]
+            return []
         
         # Get user ID from name
         user_id = None
@@ -334,13 +366,33 @@ def get_recommendations(user_data):
         if user_id is None:
             return {'artists': [], 'events': [], 'similar_users': []}
         
-        # Find similar users (Collaborative Filtering)
-        similar_users = find_similar_users(user_data, dataset, top_k=10)
+        # BUILD FOLLOWS MAPPING for user enrichment
+        follows_map = defaultdict(list)
+        for follow in dataset.get('follows', []):
+            user_id_val = follow.get('user_id')
+            artist_id = follow.get('artist_id')
+            if user_id_val and artist_id:
+                follows_map[user_id_val].append(artist_id)
         
-        # Get recommendations from different sources
-        content_recs = get_content_based_artist_recommendations(user_data, dataset)
-        collaborative_recs = get_collaborative_artist_recommendations(user_data, dataset, similar_users)
-        discovery_recs = get_discovery_recommendations(user_data, dataset)
+        # ENRICH user_data with data from CSV and follows
+        enriched_user_data = {
+            'user_id': user_id,
+            'name': full_user_data.get('name', ''),
+            'city': full_user_data.get('city', ''),
+            'art_interests': parse_list(full_user_data.get('art_interests', [])),
+            'interests': parse_list(full_user_data.get('interests', [])),
+            'moods': parse_list(full_user_data.get('moods', [])),
+            'genres': parse_list(full_user_data.get('genres', [])),
+            'follows': follows_map.get(user_id, [])
+        }
+        
+        # Find similar users (Collaborative Filtering) - USE ENRICHED DATA
+        similar_users = find_similar_users(enriched_user_data, dataset, top_k=10)
+        
+        # Get recommendations from different sources - USE ENRICHED DATA
+        content_recs = get_content_based_artist_recommendations(enriched_user_data, dataset)
+        collaborative_recs = get_collaborative_artist_recommendations(enriched_user_data, dataset, similar_users)
+        discovery_recs = get_discovery_recommendations(enriched_user_data, dataset)
         
         # Mix recommendations: 50% content + 30% collaborative + 20% discovery
         content_recs.sort(key=lambda x: x['score'], reverse=True)
@@ -379,8 +431,8 @@ def get_recommendations(user_data):
                 mixed_artists.append(rec)
                 seen.add(rec['id'])
         
-        # Get event recommendations (collaborative-aware)
-        recommended_events = get_event_recommendations(user_data, dataset, similar_users)
+        # Get event recommendations (collaborative-aware) - USE ENRICHED DATA
+        recommended_events = get_event_recommendations(enriched_user_data, dataset, similar_users)
         
         return {
             'artists': mixed_artists[:10],
@@ -400,11 +452,13 @@ def get_recommendations(user_data):
 def get_event_recommendations(user_data, dataset, similar_users):
     """
     Get event recommendations using collaborative filtering + LOCATION PRIORITY
+    Scoring Formula: FINAL_SCORE = (location × 0.50) + (content × 0.30) + (collaborative × 0.10) + (popularity × 0.10)
+    
     Considers: 
-      - 30% Location proximity (nearest events first)
-      - 35% User interests & followed artists
-      - 20% What similar users attend
-      - 15% Trending/Popularity
+      - 50% Location proximity (nearest events first) - HIGHEST PRIORITY
+      - 30% User interests & followed artists
+      - 10% What similar users attend
+      - 10% Trending/Popularity
     (Updated for multiple artists per event)
     """
     import ast
@@ -428,29 +482,29 @@ def get_event_recommendations(user_data, dataset, similar_users):
     for event in dataset['events']:
         score = 0.0
         
-        # 1. LOCATION PROXIMITY (30%) - HIGHEST PRIORITY
+        # 1. LOCATION PROXIMITY (50%) - HIGHEST PRIORITY
         distance = calculate_distance(user_city, event.get('city', ''))
         # Closer = higher score. Max distance ~400km in SL, so normalize
         location_score = max(0, 1.0 - (distance / 400.0))  # 0 at 400km, 1 at same city
-        score += location_score * 0.30
+        score += location_score * 0.50
         
-        # 2. CONTENT MATCHING (35%) - User interests and followed artists
+        # 2. CONTENT MATCHING (30%) - User interests and followed artists
         content_score = calculate_event_score(user_data, event, dataset)
-        score += content_score * 0.35
+        score += content_score * 0.30
         
-        # 3. COLLABORATIVE SCORE (20%) - Similar users' interests
+        # 3. COLLABORATIVE SCORE (10%) - Similar users' interests
         event_artists = set(parse_artist_ids(event.get('artist_ids', [])))
         for similar_user, similarity in similar_users[:5]:
             similar_follows = set(similar_user.get('follows', []))
             artist_overlap = len(event_artists & similar_follows)
             if artist_overlap > 0:
-                score += similarity * artist_overlap * 0.20
+                score += similarity * artist_overlap * 0.10
         
-        # 4. POPULARITY BOOST (15%)
+        # 4. POPULARITY BOOST (10%)
         # NEW: attends is directly in dataset, not under 'interactions'
         event_attendees = sum(1 for a in dataset.get('attends', []) if a.get('event_id') == event['event_id'])
         popularity_score = min(event_attendees / 50.0, 1.0)  # Normalize
-        score += popularity_score * 0.15
+        score += popularity_score * 0.10
         
         event_scores[event['event_id']] = {
             'id': event['event_id'],
@@ -692,7 +746,7 @@ def calculate_artist_score(user_data, artist, dataset):
     return min(score, 1.0)
 
 
-def calculate_distance(city1, city2):
+def get_trending_data(user=None, days=30, personalized=True):
     """
     Get trending artists and events (NEW - CSV data)
     
@@ -829,41 +883,78 @@ def calculate_distance(city1, city2):
     """Calculate distance between two cities"""
     # Haversine coordinates for Sri Lankan cities
     city_coords = {
-        'Colombo': (6.9271, 80.7789),
-        'Kandy': (6.9271, 80.6386),
-        'Galle': (6.0535, 80.2170),
-        'Jaffna': (9.6615, 80.7740),
-        'Ratnapura': (6.6872, 80.3903),
-        'Matara': (5.7466, 80.5395),
-        'Anuradhapura': (8.3142, 80.4137),
-        'Polonnaruwa': (7.9366, 80.9831),
-        'Trincomalee': (8.5874, 81.2346),
-        'Batticaloa': (7.7102, 81.7899),
-        'Negombo': (7.2089, 79.8589),
-        'Kalutara': (6.5881, 80.3336),
-        'Beruwala': (6.4719, 80.3589),
-        'Hikkaduwa': (6.2423, 80.1393),
-        'Unawatuna': (6.0232, 80.1856),
-        'Nuwara Eliya': (6.9497, 80.7850),
-        'Ella': (6.8654, 81.0480),
-        'Bandarawela': (6.8288, 80.9929),
-        'Dambulla': (7.8673, 80.6547),
-        'Sigiriya': (7.9426, 80.7618),
-        'Kegalle': (7.2554, 80.6506),
-        'Peradeniya': (6.8500, 80.7750),
-        'Puttalam': (8.0328, 79.8346),
-        'Kurunegala': (7.4788, 80.6355)
+        'colombo': (6.9271, 79.8612),
+        'kandy': (7.2906, 80.6337),
+        'galle': (6.0535, 80.2210),
+        'jaffna': (9.6615, 80.0255),
+        'ratnapura': (6.6872, 80.3903),
+        'matara': (5.9466, 80.5395),
+        'anuradhapura': (8.3142, 80.4137),
+        'polonnaruwa': (7.9366, 80.9831),
+        'trincomalee': (8.5874, 81.2346),
+        'batticaloa': (7.7102, 81.6924),
+        'negombo': (7.2089, 79.8589),
+        'kalutara': (6.5881, 80.0036),
+        'beruwala': (6.4719, 79.9889),
+        'hikkaduwa': (6.1482, 80.1043),
+        'unawatuna': (6.0232, 80.2456),
+        'nuwara_eliya': (6.9497, 80.7850),
+        'ella': (6.8654, 81.0480),
+        'bandarawela': (6.8288, 80.9929),
+        'dambulla': (7.8673, 80.6547),
+        'sigiriya': (7.9426, 80.7618),
+        'kegalle': (7.2554, 80.3506),
+        'peradeniya': (7.2686, 80.5931),
+        'puttalam': (8.0328, 79.8346),
+        'kurunegala': (7.4788, 80.3637),
+        'badulla': (6.9934, 81.0553),
+        'gampaha': (7.0878, 80.0027),
+        'matale': (7.4680, 80.6240),
+        'monaragala': (6.8726, 81.3486),
+        'hambantota': (6.1246, 81.1185),
+        'ampara': (7.2991, 81.6740),
+        'vavuniya': (8.7514, 80.4970),
+        'mullaitivu': (9.2674, 80.8137),
+        'kilinochchi': (9.3966, 80.3957),
+        'mannar': (8.9818, 79.9018),
+        'chilaw': (7.5759, 79.7964),
+        'ambalangoda': (6.2348, 80.0559),
+        'tangalle': (6.0244, 80.7959),
+        'embilipitiya': (6.3411, 80.8448),
+        'balangoda': (6.6483, 80.6942),
+        'tissamaharama': (6.2843, 81.2921),
+        'wellawaya': (6.7333, 81.1000),
+        'haputale': (6.7653, 80.9531),
+        'nittambuwa': (7.1589, 80.0872),
+        'avissawella': (6.9350, 80.2150),
+        'horana': (6.7156, 80.0614),
+        'panadura': (6.7128, 79.9036),
+        'moratuwa': (6.7728, 79.8820),
+        'dehiwala': (6.8356, 79.8656),
+        'kaduwela': (6.9303, 79.9775),
+        'kotte': (6.8929, 79.8989),
+        'maharagama': (6.8481, 79.9264),
+        'piliyandala': (6.7994, 79.9203),
+        'rajagiriya': (6.9078, 79.9003),
+        'nugegoda': (6.8703, 79.8991),
+        'boralesgamuwa': (6.8356, 79.8994),
     }
     
-    if city1 not in city_coords or city2 not in city_coords:
-        return random.uniform(10, 300)  # Random distance if cities not found
+    # Normalize city names: lowercase and replace spaces with underscores
+    city1_normalized = city1.lower().replace(' ', '_') if city1 else ''
+    city2_normalized = city2.lower().replace(' ', '_') if city2 else ''
     
-    if city1 == city2:
+    # Handle missing cities gracefully
+    if city1_normalized not in city_coords or city2_normalized not in city_coords:
+        print(f"WARNING: City not in coordinates database. city1='{city1_normalized}', city2='{city2_normalized}'")
+        return 100.0  # Default distance instead of random
+    
+    if city1_normalized == city2_normalized:
         return 0.0
     
-    # Simple distance calculation (not true Haversine for speed)
-    lat1, lon1 = city_coords[city1]
-    lat2, lon2 = city_coords[city2]
+    # Calculate Haversine distance
+    lat1, lon1 = city_coords[city1_normalized]
+    lat2, lon2 = city_coords[city2_normalized]
     
     distance = ((lat2 - lat1) ** 2 + (lon2 - lon1) ** 2) ** 0.5 * 111  # km per degree
     return round(distance, 1)

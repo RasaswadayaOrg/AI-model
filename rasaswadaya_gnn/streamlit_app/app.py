@@ -371,9 +371,9 @@ if st.session_state.selected_user:
             **Events are ranked by location first!**
             
             This means:
-            - Events closest to your city appear first (30% of ranking)
-            - Combined with your interests (35%) and what similar users attend (20%)
-            - Popular events boost matters (15%)
+            - Events closest to your city appear first (50% of ranking)
+            - Combined with your interests (30%) and what similar users attend (10%)
+            - Popular events boost matters (10%)
             
             Find events you can actually attend nearby! 🎭
             """)
