@@ -382,7 +382,7 @@ def evaluate(model: RecommendationModel, data, pos_edges: Dict, neg_edges: Dict,
         neg_pred = (neg_scores > 0.5).long()
         
         total_correct += pos_pred.sum().item() + (1 - neg_pred).sum().item()
-        total_samples += len(pos_pred) + len(neg_pred)
+        total_samples += pos_pred.numel() + neg_pred.numel()
     
     avg_loss = total_loss / num_edge_types if num_edge_types > 0 else 0.0
     accuracy = total_correct / total_samples if total_samples > 0 else 0.0
