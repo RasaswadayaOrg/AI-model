@@ -313,20 +313,18 @@ def train_step(model: RecommendationModel, data, optimizer: torch.optim.Optimize
         # Positive scores
         pos_scores = model.predict_link(embeddings, src_type, pos_src, dst_type, pos_dst)
         
-        # Negative scores
+        # Negative scores (corrupted-tail: same users, different artists)
         neg_scores = model.predict_link(embeddings, src_type, neg_src, dst_type, neg_dst)
         
-        # Binary cross-entropy loss
-        pos_loss = F.binary_cross_entropy(pos_scores, torch.ones_like(pos_scores))
-        neg_loss = F.binary_cross_entropy(neg_scores, torch.zeros_like(neg_scores))
-        
-        loss = pos_loss + neg_loss
+        # BPR loss: maximise log sigmoid(score_pos - score_neg)
+        loss = -torch.log(torch.sigmoid(pos_scores - neg_scores) + 1e-8).mean()
         total_loss += loss
         num_edge_types += 1
     
     if num_edge_types > 0:
         total_loss = total_loss / num_edge_types
         total_loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         optimizer.step()
         return total_loss.item()
     
@@ -370,10 +368,8 @@ def evaluate(model: RecommendationModel, data, pos_edges: Dict, neg_edges: Dict,
         pos_scores = model.predict_link(embeddings, src_type, pos_src, dst_type, pos_dst)
         neg_scores = model.predict_link(embeddings, src_type, neg_src, dst_type, neg_dst)
         
-        pos_loss = F.binary_cross_entropy(pos_scores, torch.ones_like(pos_scores))
-        neg_loss = F.binary_cross_entropy(neg_scores, torch.zeros_like(neg_scores))
-        
-        loss = pos_loss + neg_loss
+        # BPR loss (consistent with training)
+        loss = -torch.log(torch.sigmoid(pos_scores - neg_scores) + 1e-8).mean()
         total_loss += loss.item()
         num_edge_types += 1
         
