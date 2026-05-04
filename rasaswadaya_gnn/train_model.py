@@ -54,8 +54,8 @@ print(f"   Art Forms: {cfg.cultural_dna.art_forms}")
 print(f"   Languages: {cfg.cultural_dna.languages}")
 print(f"   Total Moods: {len(cfg.cultural_dna.moods)}")
 print(f"   Cultural DNA Dimensions: {cfg.cultural_dna.total_dimensions}")
-print(f"   Model Hidden Dimensions: {cfg.model.hidden_dims}")
-print(f"   Model Embedding Dimensions: {cfg.model.embedding_dims}")
+print(f"   Model Hidden Dimensions: {cfg.gnn.hidden_channels}")
+print(f"   Model Embedding Dimensions: {cfg.gnn.out_channels}")
 print()
 
 # Load dataset
