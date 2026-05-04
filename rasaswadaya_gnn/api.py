@@ -4,7 +4,7 @@ import uvicorn
 from typing import Dict, Any
 
 from config import get_config
-from data.generate_sample_data import load_dataset
+from data.fetch_live_db import get_live_dataset
 from models.graph_builder import HeterogeneousGraphBuilder
 from models.gnn_model import RecommendationModel
 
@@ -17,21 +17,17 @@ data = None
 device = None
 z_dict = None
 
-@app.on_event("startup")
-async def startup_event():
+def load_and_build_model():
     global model, graph_builder, data, device, z_dict
-    print("🚀 Loading AI Model and Graph Data into Memory...")
-    
     config = get_config()
     device = config.gnn.device
     
-    # Load your dataset
-    dataset_path = "data/sample_dataset/rasaswadaya_dataset.pkl"
     try:
-        dataset = load_dataset(dataset_path)
+        # Load dataset directly from Supabase instead of local .pkl file
+        dataset = get_live_dataset()
     except Exception as e:
-        print(f"❌ Error loading dataset: {e}")
-        return
+        print(f"❌ Error fetching from database: {e}")
+        return False
 
     # Build Graph
     graph_builder = HeterogeneousGraphBuilder(dataset)
@@ -39,7 +35,7 @@ async def startup_event():
     data = graph_builder.build_pyg_data()
     if data is None:
         print("❌ Error building PyG data.")
-        return
+        return False
         
     data = data.to(device)
     
@@ -53,11 +49,26 @@ async def startup_event():
     
     model.eval()
     
-    # Pre-compute embeddings on startup to make requests lightning fast
+    # Pre-compute embeddings
     with torch.no_grad():
         z_dict = model(data.x_dict, data.edge_index_dict)
         
-    print("✅ AI Model successfully loaded and ready for real-time requests!")
+    return True
+
+@app.on_event("startup")
+async def startup_event():
+    print("🚀 Loading Live Database into AI Memory...")
+    if load_and_build_model():
+        print("✅ AI Database Sync complete and Model loaded successfully!")
+
+@app.post("/refresh")
+async def refresh_model():
+    """Endpoint to trigger a re-sync with Supabase."""
+    print("🔄 Recieved request to refresh DB and update AI Graph...")
+    success = load_and_build_model()
+    if success:
+        return {"status": "success", "message": "AI successfully synced with live Supabase database!"}
+    raise HTTPException(status_code=500, detail="Failed to sync with DB")
 
 @app.get("/recommend/{user_id}")
 async def get_recommendations(user_id: str):
