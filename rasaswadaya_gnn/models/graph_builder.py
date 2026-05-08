@@ -42,6 +42,65 @@ class HeterogeneousGraphBuilder:
         # Graph structures
         self.graph = None
         self.pyg_data = None
+
+    def build_user_features(self, users: List[Dict[str, Any]], follows_map: Dict[str, List[str]]):
+        artist_vectors = {}
+        for artist_id, artist in self.artists.items():
+            artist_vector = self.dna_encoder.encode_artist(artist).vector.astype(np.float32)
+            artist_norm = np.linalg.norm(artist_vector)
+            artist_vectors[artist_id] = artist_vector / (artist_norm + 1e-8)
+
+        features = []
+        for user in users:
+            user_id = user.get('user_id', '')
+
+            preference_profile = {
+                'art_forms': user.get('art_interests') or user.get('art_forms') or [],
+                'genres': user.get('genres') or [],
+                'language': user.get('language_preferences') or user.get('language') or ['sinhala'],
+                'style': user.get('culture_preferences') or user.get('styles') or user.get('style') or [],
+                'mood_tags': user.get('mood_preferences') or user.get('mood_tags') or [],
+                'festivals': user.get('festivals') or [],
+            }
+            preference_vector = self.dna_encoder.encode_artist(preference_profile).vector.astype(np.float32)
+            preference_norm = np.linalg.norm(preference_vector)
+            has_preferences = preference_norm > 1e-6
+            if has_preferences:
+                preference_vector = preference_vector / preference_norm
+            else:
+                preference_vector = np.zeros_like(preference_vector)
+
+            followed_artist_ids = follows_map.get(user_id, [])
+            followed_vectors = [artist_vectors[artist_id] for artist_id in followed_artist_ids if artist_id in artist_vectors]
+            if followed_vectors:
+                interaction_vector = np.mean(followed_vectors, axis=0)
+                interaction_norm = np.linalg.norm(interaction_vector)
+                if interaction_norm > 1e-6:
+                    interaction_vector = interaction_vector / interaction_norm
+                else:
+                    interaction_vector = np.zeros_like(preference_vector)
+                has_interactions = True
+            else:
+                interaction_vector = np.zeros_like(preference_vector)
+                has_interactions = False
+
+            if has_preferences and has_interactions:
+                blended_vector = 0.5 * preference_vector + 0.5 * interaction_vector
+            elif has_preferences:
+                blended_vector = preference_vector
+            elif has_interactions:
+                blended_vector = interaction_vector
+            else:
+                blended_vector = np.zeros(self.dna_encoder.total_dims, dtype=np.float32)
+
+            blended_norm = np.linalg.norm(blended_vector)
+            if blended_norm > 1e-6:
+                blended_vector = blended_vector / blended_norm
+            features.append(blended_vector.astype(np.float32))
+
+        if not features:
+            return torch.empty((0, self.dna_encoder.total_dims), dtype=torch.float32)
+        return torch.tensor(np.array(features), dtype=torch.float32)
         
     def build_graph(self) -> nx.Graph:
         """Build NetworkX graph for analysis and community detection."""
@@ -239,27 +298,12 @@ class HeterogeneousGraphBuilder:
         # Create node features using Cultural DNA encoding
         print("🧬 Encoding Cultural DNA features...")
         
-        # Users: encode from interaction history
-        user_features = []
-        for user_id in self.reverse_mappings['user'].values():
-            user = self.users[user_id]
-            # Build interaction history for Cultural DNA
-            follows = [f for f in self.dataset['interactions']['follows'] 
-                      if f['user_id'] == user_id]
-            history = []
-            for follow in follows:
-                artist = self.artists.get(follow['artist_id'])
-                if artist:
-                    history.append({
-                        'type': 'artist',
-                        'metadata': artist,
-                        'weight': 1.0
-                    })
-            
-            dna = self.dna_encoder.encode_user(history)
-            user_features.append(dna.vector)
-        
-        data['user'].x = torch.tensor(np.array(user_features), dtype=torch.float)
+        users_in_node_order = [self.users[user_id] for user_id in self.reverse_mappings['user'].values()]
+        follows_map = defaultdict(list)
+        for follow in self.dataset['interactions']['follows']:
+            follows_map[follow['user_id']].append(follow['artist_id'])
+
+        data['user'].x = self.build_user_features(users_in_node_order, follows_map)
         print(f"  ✓ User features: {data['user'].x.shape}")
         
         # Artists: encode cultural metadata

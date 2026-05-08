@@ -1,14 +1,21 @@
 import sys
 import argparse
+import os
 import psycopg2
 from pprint import pprint
+from dotenv import load_dotenv
+
+
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+
+DB_URL = os.environ.get("DATABASE_URL")
+if not DB_URL:
+    raise RuntimeError("DATABASE_URL environment variable not set")
 
 # Connect to database directly to check recommendations
 def get_user_recommendations(user_id):
     try:
-        # Default connection string matching package.json/prisma setup
-        # Connect using the db url
-        conn = psycopg2.connect("postgresql://postgres.gmyqbkladleqthcdpeja:rasaya1234rasaya@aws-1-ap-northeast-2.pooler.supabase.com:6543/postgres?sslmode=require")
+        conn = psycopg2.connect(DB_URL)
         cur = conn.cursor()
         
         # SQL query to get recommendations with joined artist/event names

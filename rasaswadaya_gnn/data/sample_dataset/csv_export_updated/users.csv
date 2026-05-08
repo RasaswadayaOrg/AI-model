@@ -1,0 +1,201 @@
+user_id,name,ethnicity,language_preferences,city,art_interests,culture_preferences,mood_preferences,activity_level,join_date
+U0000,Nuwan Wickremasinghe,sinhala,"['sinhala', 'english']",nuwara_eliya,['music'],['contemporary'],"['patriotic', 'intense']",medium,2025-07-20T22:51:08.453082
+U0001,Anusha Herath,sinhala,['sinhala'],chilaw,"['drama', 'music']","['contemporary', 'fusion']","['suspenseful', 'theatrical']",medium,2026-01-15T22:51:08.453122
+U0002,Sachini Perera,sinhala,['sinhala'],jaffna,['film'],"['fusion', 'contemporary']","['inspirational', 'empowerment', 'peaceful', 'psychological']",medium,2025-05-18T22:51:08.453143
+U0003,Madhavi Herath,sinhala,['sinhala'],kalutara,['dance'],"['fusion', 'fusion']","['empowerment', 'national_pride']",medium,2025-09-30T22:51:08.453162
+U0004,Tharindu Ranasinghe,sinhala,['sinhala'],galle,"['music', 'film']",['contemporary'],"['suspenseful', 'competitive']",medium,2025-05-12T22:51:08.453180
+U0005,Priya Pathirana,sinhala,"['sinhala', 'english']",monaragala,"['dance', 'music']","['contemporary', 'traditional']","['religious_reverence', 'ritualistic', 'comic_relief', 'dramatic_ballad']",low,2025-05-10T22:51:08.453200
+U0006,Danushka Wickremasinghe,sinhala,['sinhala'],badulla,"['film', 'drama']","['fusion', 'contemporary']","['serious', 'social_critique']",medium,2026-03-11T22:51:08.453217
+U0007,Thiru Weerasinghe,tamil,['tamil'],anuradhapura,['music'],"['contemporary', 'fusion']","['festive', 'psychological', 'spiritual', 'hopeful']",medium,2025-07-04T22:51:08.453238
+U0008,Senthil Jayasuriya,tamil,"['tamil', 'english']",matara,['drama'],['fusion'],"['spiritual_trance', 'satirical', 'tense', 'emotional']",low,2025-11-03T22:51:08.453257
+U0009,Ravi Wijesinghe,tamil,['tamil'],ambalangoda,"['music', 'film']","['contemporary', 'traditional']","['social_awareness', 'mythological', 'melancholic']",medium,2025-06-18T22:51:08.453275
+U0010,Nadeeka Liyanage,other,['english'],trincomalee,"['dance', 'music']","['fusion', 'traditional']","['theatrical', 'ritualistic', 'inspirational_biographical', 'powerful']",low,2025-09-12T22:51:08.453294
+U0011,Nishani Selvam,other,['english'],batticaloa,['dance'],['traditional'],"['psychological', 'heroic']",medium,2026-04-01T22:51:08.453311
+U0012,Roshan Wickremasinghe,sinhala,['sinhala'],kalutara,"['film', 'music', 'drama']","['contemporary', 'traditional']","['suspense', 'traditional']",low,2025-09-08T22:51:08.453329
+U0013,Angelo Sivarajah,sinhala,"['sinhala', 'english']",kilinochchi,['music'],['traditional'],"['danceable', 'emotional', 'traditional', 'aggressive']",high,2025-08-18T22:51:08.453347
+U0014,Thilini Selvam,sinhala,"['sinhala', 'english']",nuwara_eliya,"['music', 'dance', 'drama']",['contemporary'],"['spiritual', 'intense', 'mythological', 'fearful']",medium,2025-08-01T22:51:08.453365
+U0015,Nadeesha Mendis,sinhala,['sinhala'],jaffna,['drama'],"['fusion', 'contemporary']","['theatrical', 'romantic_longing', 'mysterious']",high,2025-12-14T22:51:08.453382
+U0016,Siva Liyanage,other,['english'],ampara,['film'],['traditional'],"['satirical', 'war_tension', 'suspenseful']",high,2025-07-18T22:51:08.453399
+U0017,Thilini Jayawardena,sinhala,['sinhala'],kalutara,"['dance', 'drama']",['fusion'],"['traditional', 'energetic', 'peaceful', 'rhythmic']",medium,2025-06-19T22:51:08.453417
+U0018,Danushka Ranasinghe,sinhala,['sinhala'],polonnaruwa,['film'],"['traditional', 'contemporary']","['religious_reverence', 'joyful', 'spiritual']",medium,2025-06-20T22:51:08.453434
+U0019,Chathurika Amarasinghe,other,['english'],matale,"['dance', 'drama']",['fusion'],"['rural_village', 'suspenseful', 'graceful']",low,2025-11-01T22:51:08.453451
+U0020,Chandima Ranasinghe,sinhala,['sinhala'],kegalle,"['music', 'drama']","['traditional', 'traditional']","['mysterious', 'cultural_pride', 'rural_village', 'uplifting']",low,2025-12-21T22:51:08.453469
+U0021,Danushka Gunasekara,sinhala,"['sinhala', 'english']",gampaha,['drama'],"['traditional', 'contemporary']","['spiritual_trance', 'suspenseful']",low,2025-06-26T22:51:08.453486
+U0022,Anusha Jayasuriya,sinhala,['sinhala'],kalutara,"['dance', 'film', 'music']","['contemporary', 'traditional']","['energetic', 'social_awareness']",medium,2026-03-15T22:51:08.453503
+U0023,Nirmala Ranasinghe,tamil,['tamil'],negombo,['drama'],['fusion'],"['suspenseful', 'tense']",low,2026-03-23T22:51:08.453521
+U0024,Sachini Weerasinghe,sinhala,"['sinhala', 'english']",anuradhapura,"['dance', 'drama', 'music']",['contemporary'],"['suspense', 'ceremonial']",high,2025-08-12T22:51:08.453538
+U0025,Priya Fernando,sinhala,['sinhala'],anuradhapura,['film'],"['fusion', 'fusion']","['chill', 'social_critique', 'fusion_energy']",medium,2025-07-04T22:51:08.453555
+U0026,Nuwan Samaraweera,sinhala,['sinhala'],galle,['film'],['traditional'],"['chill', 'religious_reverence', 'expressive']",medium,2025-07-17T22:51:08.453572
+U0027,Gayan Gunasekara,sinhala,['sinhala'],gampaha,"['music', 'film']",['contemporary'],"['party', 'religious_reverence']",medium,2026-01-31T22:51:08.453592
+U0028,Nalaka Ranasinghe,sinhala,"['sinhala', 'english']",kilinochchi,['film'],['traditional'],"['empowerment', 'tense', 'political_awareness', 'fusion_energy']",medium,2026-04-04T22:51:08.453610
+U0029,Ravi Weerasinghe,sinhala,"['sinhala', 'english']",kurunegala,"['film', 'dance']","['contemporary', 'traditional']","['fearful', 'peaceful', 'rural_village']",medium,2025-05-15T22:51:08.453627
+U0030,Lasith Ranasinghe,sinhala,['sinhala'],matara,['dance'],['traditional'],"['suspense', 'joyful']",medium,2025-05-17T22:51:08.453644
+U0031,Samanthi De Silva,sinhala,"['sinhala', 'english']",jaffna,['music'],['contemporary'],"['tense', 'political_intensity']",medium,2025-06-23T22:51:08.453661
+U0032,Sanduni Wijesinghe,sinhala,"['sinhala', 'english']",ratnapura,['film'],"['contemporary', 'contemporary']","['theatrical', 'psychological', 'fierce', 'suspenseful']",low,2025-08-04T22:51:08.453679
+U0033,Amila Ekanayake,sinhala,"['sinhala', 'english']",monaragala,"['dance', 'drama']","['traditional', 'traditional']","['party', 'religious_reverence', 'inspirational_biographical']",high,2026-01-17T22:51:08.453697
+U0034,Ajith Herath,sinhala,['sinhala'],matale,['drama'],"['contemporary', 'contemporary']","['rhythmic', 'meditative']",low,2025-06-09T22:51:08.453713
+U0035,Chaminda Rathnayake,other,['english'],monaragala,"['drama', 'music']","['traditional', 'contemporary']","['tragic', 'inspirational_biographical', 'ceremonial']",medium,2025-11-16T22:51:08.453731
+U0036,Nuwan Kumar,sinhala,"['sinhala', 'english']",anuradhapura,"['drama', 'film']",['fusion'],"['tragic', 'patriotic']",low,2025-06-05T22:51:08.453748
+U0037,Nuwan Senanayake,sinhala,['sinhala'],kilinochchi,['drama'],['traditional'],"['historical_nostalgia', 'ritualistic', 'sacred']",medium,2025-09-22T22:51:08.453765
+U0038,Kavinda Pathirana,sinhala,"['sinhala', 'english']",kalutara,['music'],"['traditional', 'traditional']","['energetic', 'patriotic', 'traditional', 'powerful']",low,2025-05-21T22:51:08.453783
+U0039,Dilini Ranasinghe,sinhala,"['sinhala', 'english']",negombo,"['dance', 'drama']","['contemporary', 'traditional']","['hopeful', 'suspenseful', 'social_awareness', 'emotional']",medium,2025-10-27T22:51:08.453801
+U0040,Isuru Herath,sinhala,"['sinhala', 'english']",matale,['dance'],['contemporary'],"['inspirational', 'energetic', 'chill']",medium,2025-09-27T22:51:08.453819
+U0041,Chandima Fernando,sinhala,"['sinhala', 'english']",kilinochchi,"['music', 'dance']","['contemporary', 'fusion']","['mysterious', 'expressive', 'tense', 'political_intensity']",low,2025-11-17T22:51:08.453836
+U0042,Chathura Selvam,sinhala,"['sinhala', 'english']",kilinochchi,"['film', 'dance']",['fusion'],"['national_pride', 'fierce']",medium,2025-08-10T22:51:08.453853
+U0043,Dinesh Kumar,sinhala,"['sinhala', 'english']",colombo,['film'],['contemporary'],"['spiritual_trance', 'danceable', 'national_pride']",low,2025-11-14T22:51:08.453872
+U0044,Hashini Perera,sinhala,['sinhala'],nuwara_eliya,"['drama', 'film']",['contemporary'],"['romantic_longing', 'fierce', 'devotional', 'intense']",medium,2025-09-09T22:51:08.453889
+U0045,Nalaka De Silva,sinhala,"['sinhala', 'english']",ampara,"['drama', 'film']","['contemporary', 'contemporary']","['festive', 'heroic', 'inspirational']",low,2025-10-25T22:51:08.453906
+U0046,Chathura Rajapaksa,sinhala,['sinhala'],matale,"['film', 'drama']","['fusion', 'fusion']","['heroic', 'love_longing', 'tense']",medium,2025-07-05T22:51:08.453924
+U0047,Chaminda Amarasinghe,sinhala,['sinhala'],matara,"['dance', 'film']","['traditional', 'traditional']","['suspense', 'thriller_tension', 'graceful']",medium,2026-03-09T22:51:08.453941
+U0048,Ruwan Pathirana,sinhala,['sinhala'],kalutara,['music'],['traditional'],"['political_awareness', 'peaceful', 'traditional', 'inspirational']",medium,2025-09-03T22:51:08.453958
+U0049,Vindya Ekanayake,sinhala,['sinhala'],batticaloa,['drama'],"['fusion', 'fusion']","['melancholic', 'dramatic', 'uplifting']",medium,2025-11-20T22:51:08.453975
+U0050,Nadeeka Mendis,sinhala,['sinhala'],ampara,['music'],"['contemporary', 'contemporary']","['romantic', 'heroic', 'rural_village']",low,2025-08-15T22:51:08.453992
+U0051,Priya Weerasinghe,sinhala,"['sinhala', 'english']",ratnapura,"['dance', 'drama']",['contemporary'],"['mysterious', 'cultural_pride', 'dark', 'joyful']",high,2025-10-29T22:51:08.454009
+U0052,Gayan Selvam,sinhala,"['sinhala', 'english']",negombo,['film'],"['fusion', 'contemporary']","['graceful', 'peaceful', 'energetic']",low,2025-10-21T22:51:08.454026
+U0053,Nuwan Wickremasinghe,sinhala,['sinhala'],anuradhapura,"['music', 'film']","['contemporary', 'contemporary']","['suspense', 'political_intensity']",medium,2025-11-13T22:51:08.454043
+U0054,Sandani Senanayake,sinhala,"['sinhala', 'english']",kegalle,['music'],"['contemporary', 'contemporary']","['emotional', 'suspenseful', 'party', 'rebel']",medium,2025-11-08T22:51:08.454059
+U0055,Nadeesha Selvam,sinhala,['sinhala'],kalutara,['film'],['fusion'],"['social_critique', 'celebratory', 'inspirational_biographical']",medium,2026-03-08T22:51:08.454076
+U0056,Madhavi Senanayake,sinhala,"['sinhala', 'english']",mannar,"['dance', 'drama']",['fusion'],"['romantic_longing', 'inspirational', 'patriotic']",low,2025-05-28T22:51:08.454093
+U0057,Mohan Dissanayake,tamil,['tamil'],ampara,['drama'],['traditional'],"['competitive', 'inspirational']",medium,2026-01-16T22:51:08.454110
+U0058,Samanthi Gunawardena,sinhala,"['sinhala', 'english']",polonnaruwa,['drama'],"['traditional', 'contemporary']","['aggressive', 'social_critique', 'serious']",low,2025-11-14T22:51:08.454127
+U0059,Vani Kumar,tamil,"['tamil', 'english']",ratnapura,"['music', 'dance']","['fusion', 'contemporary']","['romantic_longing', 'mysterious', 'fierce', 'tragic']",medium,2025-10-16T22:51:08.454144
+U0060,Chathura Selvam,sinhala,"['sinhala', 'english']",hambantota,"['dance', 'film', 'drama']",['fusion'],"['energetic', 'religious_reverence', 'suspense']",low,2025-09-21T22:51:08.454161
+U0061,Dinesh De Silva,sinhala,['sinhala'],gampaha,['film'],['fusion'],"['dramatic', 'war_tension', 'sacred']",high,2026-01-21T22:51:08.454182
+U0062,Chandima Perera,sinhala,['sinhala'],trincomalee,"['film', 'dance']","['contemporary', 'fusion']","['tragic', 'empowerment', 'religious_reverence', 'romantic_longing']",low,2026-03-17T22:51:08.454200
+U0063,Amila Wickremasinghe,sinhala,"['sinhala', 'english']",badulla,['music'],['contemporary'],"['political_awareness', 'patriotic', 'energetic', 'historical_nostalgia']",low,2025-11-05T22:51:08.454217
+U0064,Yashodha Wickremasinghe,sinhala,['sinhala'],batticaloa,['dance'],['traditional'],"['empowerment', 'mythological', 'comic_relief', 'dark']",medium,2025-05-13T22:51:08.454234
+U0065,Danushka Samaraweera,sinhala,['sinhala'],ratnapura,['film'],['traditional'],"['political_awareness', 'theatrical', 'festive']",medium,2025-11-01T22:51:08.454251
+U0066,Isuru Jayasuriya,sinhala,"['sinhala', 'english']",nuwara_eliya,['film'],"['fusion', 'traditional']","['dramatic_ballad', 'national_pride', 'spiritual', 'reflective']",low,2025-07-24T22:51:08.454268
+U0067,Mala Jayawardena,tamil,['tamil'],ratnapura,['dance'],"['contemporary', 'contemporary']","['serious', 'dramatic', 'energetic', 'social_awareness']",low,2026-03-18T22:51:08.454286
+U0068,Lahiru Perera,sinhala,['sinhala'],matara,['drama'],['traditional'],"['love_longing', 'war_tension', 'satirical', 'cultural_pride']",low,2025-11-24T22:51:08.454303
+U0069,Vijay Weerasinghe,other,['english'],matara,"['film', 'music']","['fusion', 'traditional']","['dramatic_ballad', 'love_longing']",high,2025-09-14T22:51:08.454321
+U0070,Chathura Selvam,sinhala,['sinhala'],ambalangoda,"['film', 'drama']","['fusion', 'fusion']","['heroic', 'suspense']",high,2025-06-21T22:51:08.454338
+U0071,Vindya Senanayake,sinhala,['sinhala'],kalutara,"['drama', 'film']","['contemporary', 'traditional']","['romantic', 'political_awareness']",low,2026-02-04T22:51:08.454355
+U0072,Chathura Nadarajah,sinhala,['sinhala'],mannar,['drama'],['fusion'],"['dramatic', 'romantic_longing', 'rebel', 'national_pride']",high,2025-09-27T22:51:08.454372
+U0073,Damith Rathnayake,sinhala,['sinhala'],ambalangoda,['film'],"['traditional', 'traditional']","['sacred', 'intense']",medium,2025-05-11T22:51:08.454389
+U0074,Nuwan Weerasinghe,sinhala,['sinhala'],hambantota,['dance'],['traditional'],"['uplifting', 'ritualistic', 'heroic', 'party']",low,2025-06-03T22:51:08.454406
+U0075,Chathurika Amarasinghe,sinhala,['sinhala'],galle,"['music', 'film']",['traditional'],"['mythological', 'historical_nostalgia', 'devotional']",high,2026-03-09T22:51:08.454423
+U0076,Kavinda Liyanage,sinhala,['sinhala'],kalutara,['film'],['contemporary'],"['energetic', 'political_intensity']",medium,2025-05-10T22:51:08.454440
+U0077,Sanduni De Silva,other,['english'],jaffna,['music'],"['contemporary', 'contemporary']","['historical_nostalgia', 'dark']",high,2025-11-15T22:51:08.454459
+U0078,Sandani Nadarajah,sinhala,"['sinhala', 'english']",puttalam,"['drama', 'film']","['traditional', 'contemporary']","['psychological', 'ritualistic', 'expressive', 'fierce']",low,2025-09-05T22:51:08.454478
+U0079,Ayesha Thiyagarajah,sinhala,"['sinhala', 'english']",badulla,['drama'],"['contemporary', 'contemporary']","['suspense', 'sad']",high,2026-02-20T22:51:08.454494
+U0080,Angelo Weerasinghe,sinhala,"['sinhala', 'english']",panadura,"['film', 'drama']",['contemporary'],"['theatrical', 'reflective', 'rural_village', 'social_awareness']",medium,2025-06-13T22:51:08.454512
+U0081,Chathurika Wickremasinghe,sinhala,"['sinhala', 'english']",negombo,['film'],['contemporary'],"['ceremonial', 'theatrical', 'patriotic', 'cultural_pride']",high,2025-11-16T22:51:08.454530
+U0082,Nalaka Sivarajah,sinhala,"['sinhala', 'english']",colombo,['dance'],"['traditional', 'contemporary']","['intense', 'war_tension']",medium,2025-09-02T22:51:08.454547
+U0083,Nadeeka Dissanayake,sinhala,"['sinhala', 'english']",badulla,['music'],['traditional'],"['reflective', 'peaceful', 'cultural_pride', 'graceful']",medium,2025-07-30T22:51:08.454564
+U0084,Kavinda Rajapaksa,sinhala,"['sinhala', 'english']",monaragala,"['film', 'dance']",['traditional'],"['romantic_longing', 'war_tension', 'social_awareness', 'energetic']",medium,2025-06-02T22:51:08.454581
+U0085,Ravi Rajapaksa,sinhala,"['sinhala', 'english']",monaragala,['film'],"['contemporary', 'traditional']","['expressive', 'tense', 'motivational', 'empowerment']",medium,2025-12-08T22:51:08.454598
+U0086,Dinesh Perera,sinhala,"['sinhala', 'english']",jaffna,"['music', 'dance', 'drama']","['fusion', 'fusion']","['theatrical', 'fusion_energy', 'rhythmic', 'urban_street']",high,2026-03-25T22:51:08.454615
+U0087,Sachini Weerasinghe,other,['english'],puttalam,['film'],['contemporary'],"['traditional', 'expressive']",medium,2025-07-10T22:51:08.454631
+U0088,Nalaka Wickremasinghe,sinhala,"['sinhala', 'english']",hambantota,"['music', 'film']",['contemporary'],"['chill', 'dark']",medium,2026-01-20T22:51:08.454649
+U0089,Thilini Ekanayake,sinhala,['sinhala'],monaragala,"['dance', 'film']","['contemporary', 'contemporary']","['fierce', 'historical_nostalgia', 'religious_reverence', 'mysterious']",medium,2025-08-07T22:51:08.454668
+U0090,Nalaka Bandara,sinhala,"['sinhala', 'english']",gampaha,['music'],"['contemporary', 'traditional']","['rural_village', 'joyful', 'intense']",medium,2025-07-19T22:51:08.454686
+U0091,Sandani Selvam,sinhala,['sinhala'],ratnapura,"['dance', 'drama']","['contemporary', 'fusion']","['emotional', 'danceable', 'peaceful']",medium,2026-01-06T22:51:08.454703
+U0092,Samanthi Selvam,sinhala,"['sinhala', 'english']",batticaloa,"['dance', 'drama']","['fusion', 'contemporary']","['reflective', 'party', 'sad']",medium,2025-06-23T22:51:08.454720
+U0093,Lakshman Liyanage,sinhala,"['sinhala', 'english']",anuradhapura,"['dance', 'drama', 'music']",['fusion'],"['dramatic_ballad', 'motivational', 'peaceful']",medium,2025-09-24T22:51:08.454739
+U0094,Sachini Ranasinghe,sinhala,['sinhala'],polonnaruwa,"['music', 'film']","['contemporary', 'traditional']","['angry', 'ritualistic', 'danceable']",low,2025-07-30T22:51:08.454756
+U0095,Dilini Perera,sinhala,['sinhala'],matara,"['music', 'film']",['contemporary'],"['motivational', 'empowerment', 'mysterious', 'suspenseful']",high,2025-05-20T22:51:08.454774
+U0096,Muthu Silva,tamil,"['tamil', 'english']",kilinochchi,['dance'],"['contemporary', 'contemporary']","['heroic', 'tragic', 'mythological']",medium,2025-08-07T22:51:08.454791
+U0097,Isuru Sivarajah,other,['english'],anuradhapura,"['drama', 'dance', 'film']","['contemporary', 'contemporary']","['powerful', 'serious']",low,2026-03-09T22:51:08.454811
+U0098,Madhavi Herath,sinhala,['sinhala'],batticaloa,"['film', 'music', 'drama']","['contemporary', 'contemporary']","['intense', 'ceremonial', 'fierce']",low,2026-03-22T22:51:08.454829
+U0099,Nadeesha Wickremasinghe,sinhala,"['sinhala', 'english']",jaffna,"['film', 'music', 'drama']","['fusion', 'fusion']","['party', 'dark', 'serious', 'romantic']",medium,2025-08-06T22:51:08.454847
+U0100,Dilini Selvam,sinhala,"['sinhala', 'english']",puttalam,['music'],['traditional'],"['psychological', 'war_tension']",medium,2025-11-08T22:51:08.454864
+U0101,Sanduni Wickremasinghe,sinhala,['sinhala'],kilinochchi,"['drama', 'music']",['fusion'],"['tragic', 'devotional', 'social_critique']",medium,2026-01-21T22:51:08.454922
+U0102,Kasun Wickremasinghe,sinhala,"['sinhala', 'english']",kurunegala,['music'],"['traditional', 'contemporary']","['satirical', 'psychological', 'devotional', 'meditative']",low,2026-03-13T22:51:08.454956
+U0103,Madhavi Liyanage,sinhala,"['sinhala', 'english']",colombo,['music'],"['traditional', 'contemporary']","['party', 'serious']",high,2025-06-29T22:51:08.455034
+U0104,Chandima Pathirana,sinhala,['sinhala'],monaragala,"['drama', 'film']",['fusion'],"['sacred', 'romantic']",medium,2026-03-13T22:51:08.455058
+U0105,Rajan Kumara,tamil,"['tamil', 'english']",matara,"['drama', 'dance']",['contemporary'],"['rural_village', 'acoustic_warm']",low,2026-03-11T22:51:08.455076
+U0106,Kamala Jayasuriya,tamil,"['tamil', 'english']",ratnapura,['drama'],"['fusion', 'contemporary']","['comic_relief', 'heartbreak']",low,2025-07-13T22:51:08.455094
+U0107,Lasith Perera,sinhala,"['sinhala', 'english']",kilinochchi,"['dance', 'film']","['contemporary', 'traditional']","['urban_street', 'social_awareness', 'fierce', 'theatrical']",high,2025-08-20T22:51:08.455113
+U0108,Chaminda Jayawardena,sinhala,"['sinhala', 'english']",kilinochchi,['music'],['contemporary'],"['love_longing', 'social_critique', 'suspenseful']",low,2026-01-21T22:51:08.455131
+U0109,Vasanthi Silva,tamil,"['tamil', 'english']",panadura,['film'],"['contemporary', 'contemporary']","['mysterious', 'fierce', 'heartbreak', 'graceful']",low,2025-06-15T22:51:08.455150
+U0110,Madhavi Kumar,sinhala,"['sinhala', 'english']",chilaw,['music'],['contemporary'],"['political_intensity', 'meditative', 'inspirational']",medium,2025-11-22T22:51:08.455167
+U0111,Ravi Herath,sinhala,"['sinhala', 'english']",trincomalee,['dance'],['contemporary'],"['graceful', 'intense', 'religious_reverence', 'chill']",low,2025-06-27T22:51:08.455185
+U0112,Nalaka Herath,sinhala,['sinhala'],polonnaruwa,"['dance', 'drama', 'music']",['fusion'],"['mythological', 'comic_relief']",high,2025-06-25T22:51:08.455202
+U0113,Ayesha Jayawardena,sinhala,['sinhala'],kalutara,['drama'],"['contemporary', 'contemporary']","['joyful', 'motivational', 'religious_reverence', 'fierce']",medium,2025-07-14T22:51:08.455221
+U0114,Anusha Ekanayake,sinhala,['sinhala'],panadura,['music'],['contemporary'],"['fearful', 'suspenseful', 'historical_nostalgia']",low,2025-12-10T22:51:08.455238
+U0115,Hashini Rathnayake,sinhala,"['sinhala', 'english']",kalutara,['film'],['contemporary'],"['tragic', 'intense', 'satirical', 'fearful']",medium,2025-06-11T22:51:08.455255
+U0116,Dinesh Pathirana,sinhala,"['sinhala', 'english']",kurunegala,['music'],['traditional'],"['spiritual_trance', 'uplifting', 'rhythmic', 'patriotic']",medium,2025-05-18T22:51:08.455280
+U0117,Chandima De Silva,sinhala,"['sinhala', 'english']",nuwara_eliya,"['drama', 'dance']","['traditional', 'traditional']","['rhythmic', 'thriller_tension', 'competitive']",medium,2025-05-29T22:51:08.455300
+U0118,Samanthi Liyanage,sinhala,"['sinhala', 'english']",ambalangoda,"['dance', 'drama', 'music']","['traditional', 'traditional']","['traditional', 'dark', 'dramatic']",high,2025-09-20T22:51:08.455318
+U0119,Vijay Rathnayake,tamil,['tamil'],kandy,"['film', 'music']",['contemporary'],"['competitive', 'comic_relief', 'social_awareness', 'devotional']",high,2025-09-15T22:51:08.455336
+U0120,Amila Bandara,sinhala,['sinhala'],ambalangoda,['film'],"['contemporary', 'fusion']","['suspense', 'rural_village', 'tragic', 'spiritual']",low,2025-08-27T22:51:08.455353
+U0121,Danushka Ekanayake,sinhala,"['sinhala', 'english']",jaffna,['drama'],['contemporary'],"['love_longing', 'psychological']",medium,2025-09-19T22:51:08.455369
+U0122,Anusha Pathirana,sinhala,"['sinhala', 'english']",puttalam,"['music', 'drama']",['contemporary'],"['love_longing', 'dark', 'powerful']",medium,2025-09-11T22:51:08.455387
+U0123,Chaminda Wijesinghe,sinhala,['sinhala'],polonnaruwa,['drama'],"['traditional', 'fusion']","['historical_nostalgia', 'religious_reverence']",high,2025-05-24T22:51:08.455404
+U0124,Nalaka Gunawardena,sinhala,"['sinhala', 'english']",kegalle,"['drama', 'film']","['contemporary', 'traditional']","['hopeful', 'rhythmic', 'social_awareness']",low,2025-05-17T22:51:08.455421
+U0125,Ruwan Senanayake,sinhala,"['sinhala', 'english']",ratnapura,"['dance', 'film', 'music']","['traditional', 'contemporary']","['empowerment', 'dark', 'traditional', 'romantic']",medium,2026-02-07T22:51:08.455439
+U0126,Damith Thiyagarajah,sinhala,"['sinhala', 'english']",panadura,['dance'],"['contemporary', 'contemporary']","['melancholic', 'serious', 'political_intensity']",medium,2025-10-20T22:51:08.455456
+U0127,Vijay Gunawardena,other,['english'],jaffna,['dance'],"['fusion', 'contemporary']","['spiritual_trance', 'thriller_tension', 'aggressive']",low,2025-11-13T22:51:08.455475
+U0128,Priya Ekanayake,sinhala,"['sinhala', 'english']",matara,"['drama', 'dance']","['contemporary', 'fusion']","['national_pride', 'rural_village', 'inspirational', 'inspirational_biographical']",medium,2025-09-14T22:51:08.455493
+U0129,Senthil Dissanayake,tamil,['tamil'],gampaha,['music'],"['fusion', 'contemporary']","['thriller_tension', 'ritualistic', 'powerful', 'tragic']",medium,2025-06-21T22:51:08.455515
+U0130,Dilini Jayawardena,sinhala,['sinhala'],badulla,"['dance', 'music']",['contemporary'],"['dramatic', 'rebel']",medium,2025-08-06T22:51:08.455533
+U0131,Dilini Amarasinghe,sinhala,['sinhala'],kandy,['drama'],"['contemporary', 'contemporary']","['historical_nostalgia', 'rural_village', 'melancholic']",low,2026-02-18T22:51:08.455550
+U0132,Priya Kumara,sinhala,['sinhala'],kandy,['dance'],['fusion'],"['comic_relief', 'angry', 'urban_street']",low,2026-03-31T22:51:08.455568
+U0133,Thisara Kumara,sinhala,['sinhala'],hambantota,['drama'],['fusion'],"['cultural_pride', 'aggressive', 'hopeful']",medium,2025-08-13T22:51:08.455584
+U0134,Samanthi Fernando,sinhala,['sinhala'],badulla,['film'],['traditional'],"['fusion_energy', 'theatrical', 'social_critique', 'historical_nostalgia']",high,2026-02-15T22:51:08.455601
+U0135,Dilini Kumar,sinhala,"['sinhala', 'english']",nuwara_eliya,['drama'],['contemporary'],"['party', 'political_awareness', 'spiritual']",medium,2025-10-02T22:51:08.455619
+U0136,Mahela Selvam,sinhala,['sinhala'],matara,['film'],['contemporary'],"['heartbreak', 'ceremonial', 'serious']",medium,2025-08-15T22:51:08.455636
+U0137,Thisara Thiyagarajah,sinhala,"['sinhala', 'english']",polonnaruwa,"['drama', 'film']",['contemporary'],"['peaceful', 'war_tension', 'fierce', 'love_longing']",high,2025-06-20T22:51:08.455654
+U0138,Anusha Bandara,sinhala,['sinhala'],ampara,['film'],"['traditional', 'traditional']","['romantic_longing', 'intense', 'social_critique', 'fierce']",low,2025-08-15T22:51:08.455672
+U0139,Kavinda Bandara,sinhala,"['sinhala', 'english']",gampaha,"['film', 'drama']",['contemporary'],"['ritualistic', 'joyful']",high,2025-10-10T22:51:08.455689
+U0140,Chathura Kumara,sinhala,['sinhala'],kalutara,"['drama', 'music', 'dance']","['traditional', 'traditional']","['rhythmic', 'heartbreak', 'empowerment', 'fierce']",low,2025-09-23T22:51:08.455707
+U0141,Malsha Senanayake,sinhala,['sinhala'],ambalangoda,['drama'],['contemporary'],"['celebratory', 'devotional']",low,2025-08-10T22:51:08.455723
+U0142,Chathura Amarasinghe,sinhala,"['sinhala', 'english']",jaffna,"['dance', 'drama']","['traditional', 'traditional']","['hopeful', 'romantic', 'rhythmic', 'devotional']",medium,2026-03-01T22:51:08.455741
+U0143,Chaminda Jayawardena,sinhala,"['sinhala', 'english']",anuradhapura,"['music', 'drama']",['contemporary'],"['inspirational_biographical', 'ritualistic']",low,2026-03-07T22:51:08.455757
+U0144,Lakshman Pathirana,sinhala,['sinhala'],badulla,"['film', 'music']","['fusion', 'fusion']","['ceremonial', 'rebel', 'political_awareness', 'national_pride']",high,2025-06-06T22:51:08.455775
+U0145,Muthu Amarasinghe,tamil,"['tamil', 'english']",trincomalee,['film'],"['contemporary', 'contemporary']","['rebel', 'mysterious', 'political_awareness']",medium,2025-07-03T22:51:08.455792
+U0146,Priya Rathnayake,sinhala,"['sinhala', 'english']",polonnaruwa,['drama'],['contemporary'],"['war_tension', 'serious', 'meditative']",medium,2025-12-21T22:51:08.455811
+U0147,Lasith Rathnayake,sinhala,"['sinhala', 'english']",ambalangoda,['dance'],['traditional'],"['energetic', 'joyful', 'aggressive', 'ritualistic']",medium,2025-10-16T22:51:08.455828
+U0148,Kasun Kumara,sinhala,['sinhala'],matale,"['music', 'film', 'dance']",['contemporary'],"['uplifting', 'dramatic_ballad', 'mythological', 'psychological']",medium,2025-11-11T22:51:08.455846
+U0149,Chathura Dissanayake,sinhala,"['sinhala', 'english']",galle,['drama'],"['traditional', 'fusion']","['religious_reverence', 'uplifting', 'heartbreak']",medium,2026-03-12T22:51:08.455864
+U0150,Priya Fernando,sinhala,['sinhala'],galle,"['drama', 'dance']",['traditional'],"['empowerment', 'traditional']",medium,2025-05-04T22:51:08.455881
+U0151,Malsha Gunasekara,other,['english'],monaragala,"['drama', 'dance']",['contemporary'],"['fearful', 'serious', 'inspirational_biographical']",medium,2025-07-01T22:51:08.455898
+U0152,Sanduni Gunawardena,other,['english'],gampaha,"['music', 'film']",['contemporary'],"['serious', 'heroic', 'sad']",low,2026-03-31T22:51:08.455915
+U0153,Ayesha Silva,sinhala,"['sinhala', 'english']",puttalam,"['drama', 'film']","['traditional', 'contemporary']","['spiritual', 'devotional', 'war_tension']",low,2025-07-04T22:51:08.455932
+U0154,Chaminda Gunawardena,other,['english'],kegalle,"['drama', 'music']",['fusion'],"['mysterious', 'mythological', 'aggressive', 'war_tension']",medium,2025-10-05T22:51:08.455949
+U0155,Nadeesha Sivarajah,sinhala,['sinhala'],jaffna,['dance'],['traditional'],"['romantic', 'intense']",medium,2025-09-23T22:51:08.455966
+U0156,Mahela Herath,sinhala,['sinhala'],kandy,['drama'],"['contemporary', 'fusion']","['war_tension', 'energetic']",medium,2025-06-18T22:51:08.455983
+U0157,Chaminda Ranasinghe,sinhala,['sinhala'],galle,"['music', 'drama', 'dance']",['fusion'],"['dark', 'dramatic_ballad', 'joyful', 'political_awareness']",high,2025-12-02T22:51:08.456002
+U0158,Isuru Nadarajah,sinhala,"['sinhala', 'english']",monaragala,"['music', 'film']","['traditional', 'contemporary']","['danceable', 'dramatic_ballad']",low,2025-10-19T22:51:08.456020
+U0159,Saman De Silva,sinhala,"['sinhala', 'english']",nuwara_eliya,['drama'],"['traditional', 'contemporary']","['peaceful', 'urban_street', 'traditional']",low,2026-02-21T22:51:08.456037
+U0160,Isuru Liyanage,sinhala,['sinhala'],jaffna,['music'],['traditional'],"['graceful', 'love_longing', 'cultural_pride']",high,2026-02-19T22:51:08.456057
+U0161,Damith Jayasuriya,sinhala,"['sinhala', 'english']",colombo,['music'],"['fusion', 'traditional']","['meditative', 'peaceful', 'traditional']",medium,2026-01-08T22:51:08.456075
+U0162,Nadeeka Gunasekara,sinhala,['sinhala'],matara,['dance'],['traditional'],"['rhythmic', 'political_awareness', 'thriller_tension']",low,2025-10-02T22:51:08.456092
+U0163,Amila Jayawardena,sinhala,"['sinhala', 'english']",puttalam,['music'],['contemporary'],"['party', 'empowerment', 'graceful']",medium,2025-05-06T22:51:08.456108
+U0164,Saman Dissanayake,other,['english'],hambantota,"['dance', 'drama']","['traditional', 'contemporary']","['urban_street', 'romantic_longing', 'traditional']",medium,2025-11-12T22:51:08.456126
+U0165,Karthik Jayasuriya,tamil,"['tamil', 'english']",kurunegala,['dance'],['fusion'],"['uplifting', 'graceful', 'urban_street']",low,2026-02-28T22:51:08.456144
+U0166,Meena Ranasinghe,tamil,"['tamil', 'english']",trincomalee,['film'],['traditional'],"['theatrical', 'empowerment']",high,2025-06-02T22:51:08.456160
+U0167,Nadeesha Amarasinghe,sinhala,"['sinhala', 'english']",gampaha,"['film', 'drama']",['traditional'],"['acoustic_warm', 'fearful']",medium,2026-03-13T22:51:08.456177
+U0168,Chandima Ekanayake,sinhala,"['sinhala', 'english']",hambantota,"['drama', 'music', 'film']",['traditional'],"['political_intensity', 'ceremonial', 'fierce', 'heartbreak']",medium,2025-06-07T22:51:08.456195
+U0169,Chathurika Fernando,sinhala,"['sinhala', 'english']",trincomalee,['drama'],['traditional'],"['dark', 'chill', 'social_awareness', 'danceable']",medium,2025-12-20T22:51:08.456212
+U0170,Tharindu Jayasuriya,sinhala,"['sinhala', 'english']",mannar,"['drama', 'dance']",['contemporary'],"['hopeful', 'devotional', 'danceable', 'emotional']",medium,2026-01-10T22:51:08.456229
+U0171,Hiruni Gunawardena,other,['english'],kandy,"['film', 'drama']","['fusion', 'traditional']","['angry', 'expressive', 'dramatic_ballad']",high,2025-05-25T22:51:08.456246
+U0172,Arun Nadarajah,tamil,"['tamil', 'english']",colombo,"['dance', 'drama']",['contemporary'],"['angry', 'love_longing', 'historical_nostalgia', 'powerful']",medium,2025-11-21T22:51:08.456263
+U0173,Hiruni Jayawardena,sinhala,"['sinhala', 'english']",jaffna,"['music', 'dance']","['fusion', 'contemporary']","['political_awareness', 'peaceful', 'serious', 'religious_reverence']",high,2025-10-30T22:51:08.456281
+U0174,Madhavi Gunawardena,sinhala,['sinhala'],jaffna,['dance'],"['contemporary', 'contemporary']","['tense', 'fearful', 'romantic_longing', 'rural_village']",high,2025-10-25T22:51:08.456299
+U0175,Durga Rathnayake,tamil,['tamil'],ambalangoda,"['drama', 'music', 'film']","['fusion', 'contemporary']","['rebel', 'romantic_longing', 'rhythmic']",low,2025-08-20T22:51:08.456316
+U0176,Lasith Weerasinghe,sinhala,['sinhala'],monaragala,['music'],"['traditional', 'traditional']","['comic_relief', 'psychological', 'social_critique']",high,2026-02-05T22:51:08.456332
+U0177,Chathura Amarasinghe,sinhala,"['sinhala', 'english']",kegalle,"['drama', 'film']",['fusion'],"['traditional', 'political_awareness']",low,2026-03-19T22:51:08.456350
+U0178,Tharindu Selvam,sinhala,['sinhala'],negombo,"['dance', 'music']","['fusion', 'contemporary']","['fearful', 'serious', 'uplifting']",low,2026-03-05T22:51:08.456367
+U0179,Chathura Jayawardena,sinhala,"['sinhala', 'english']",ampara,['film'],"['contemporary', 'fusion']","['dramatic', 'serious', 'rebel', 'melancholic']",low,2025-05-04T22:51:08.456384
+U0180,Dilini Wijesinghe,sinhala,['sinhala'],polonnaruwa,['dance'],"['contemporary', 'contemporary']","['rhythmic', 'empowerment', 'fierce']",high,2026-02-16T22:51:08.456402
+U0181,Nishani Herath,sinhala,"['sinhala', 'english']",ambalangoda,['drama'],"['contemporary', 'fusion']","['intense', 'sacred', 'acoustic_warm', 'sad']",low,2025-09-13T22:51:08.456419
+U0182,Yashodha De Silva,sinhala,['sinhala'],galle,['film'],"['contemporary', 'traditional']","['danceable', 'reflective', 'energetic']",high,2025-08-12T22:51:08.456436
+U0183,Nadeeka Selvam,sinhala,"['sinhala', 'english']",colombo,"['drama', 'music', 'film']","['traditional', 'fusion']","['intense', 'love_longing', 'festive']",high,2025-05-07T22:51:08.456453
+U0184,Nadeesha Liyanage,sinhala,"['sinhala', 'english']",polonnaruwa,"['drama', 'film']",['contemporary'],"['ritualistic', 'thriller_tension']",high,2025-06-05T22:51:08.456470
+U0185,Malsha Fernando,sinhala,"['sinhala', 'english']",colombo,"['music', 'dance']",['contemporary'],"['meditative', 'intense']",low,2026-02-11T22:51:08.456486
+U0186,Madhavi Wijesinghe,sinhala,"['sinhala', 'english']",jaffna,"['dance', 'film']",['traditional'],"['spiritual', 'fearful', 'graceful', 'chill']",low,2025-05-18T22:51:08.456506
+U0187,Kavinda Rathnayake,sinhala,"['sinhala', 'english']",matale,['music'],['contemporary'],"['meditative', 'chill', 'theatrical', 'religious_reverence']",low,2025-11-29T22:51:08.456524
+U0188,Lasith Amarasinghe,sinhala,['sinhala'],puttalam,"['film', 'drama']",['fusion'],"['political_awareness', 'uplifting', 'political_intensity', 'social_critique']",high,2025-09-16T22:51:08.456542
+U0189,Mahela De Silva,sinhala,['sinhala'],jaffna,['drama'],['contemporary'],"['love_longing', 'religious_reverence']",high,2025-06-17T22:51:08.456558
+U0190,Chathura Ekanayake,sinhala,['sinhala'],trincomalee,"['music', 'drama', 'film']",['traditional'],"['melancholic', 'dramatic_ballad']",medium,2025-05-18T22:51:08.456575
+U0191,Kavinda Herath,sinhala,"['sinhala', 'english']",jaffna,['dance'],"['traditional', 'traditional']","['mysterious', 'tragic']",medium,2025-06-08T22:51:08.456592
+U0192,Chandima Dissanayake,sinhala,['sinhala'],polonnaruwa,['dance'],['traditional'],"['hopeful', 'sacred', 'melancholic']",medium,2026-01-05T22:51:08.456608
+U0193,Samanthi Herath,sinhala,['sinhala'],colombo,['film'],"['traditional', 'traditional']","['inspirational', 'patriotic', 'party']",low,2025-11-16T22:51:08.456626
+U0194,Danushka De Silva,sinhala,['sinhala'],mannar,"['music', 'dance']",['contemporary'],"['emotional', 'hopeful', 'heroic']",low,2026-04-03T22:51:08.456643
+U0195,Kasun Silva,sinhala,['sinhala'],trincomalee,['dance'],['fusion'],"['psychological', 'rhythmic']",medium,2025-11-28T22:51:08.456660
+U0196,Lahiru Gunasekara,sinhala,"['sinhala', 'english']",kegalle,['film'],['contemporary'],"['tense', 'ceremonial']",low,2026-03-12T22:51:08.456676
+U0197,Dilini Samaraweera,other,['english'],mannar,"['film', 'dance', 'music']","['traditional', 'traditional']","['political_awareness', 'traditional', 'competitive', 'heartbreak']",medium,2025-07-26T22:51:08.456696
+U0198,Nadeesha Liyanage,other,['english'],ampara,"['dance', 'music']",['fusion'],"['heroic', 'inspirational_biographical']",medium,2026-03-31T22:51:08.456713
+U0199,Kasun Ekanayake,other,['english'],anuradhapura,['film'],['traditional'],"['rhythmic', 'romantic_longing']",low,2026-01-22T22:51:08.456729
