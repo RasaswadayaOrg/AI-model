@@ -8,47 +8,45 @@ Provides multiple ways to calculate distance between cities:
 """
 
 import math
-from typing import Dict, Tuple
+from typing import Any, Dict, Optional, Tuple
 
 # Geographic coordinates (latitude, longitude) for Sri Lankan cities
 CITY_COORDINATES: Dict[str, Tuple[float, float]] = {
-    # Western Province
-    'Colombo': (6.9271, 80.7789),
-    'Gampaha': (7.0889, 80.2114),
-    'Kalutara': (6.5869, 80.1130),
-    
-    # Central Province
-    'Kandy': (7.2906, 80.6337),
-    'Matale': (7.7674, 80.7294),
-    'Nuwara Eliya': (6.9497, 80.7891),
-    
-    # Southern Province
-    'Galle': (6.0535, 80.2170),
-    'Matara': (5.7490, 80.5371),
-    'Hambantota': (6.1256, 81.1242),
-    
-    # Northern Province
-    'Jaffna': (9.6615, 80.7740),
-    'Kilinochchi': (9.3834, 80.4050),
-    'Mannar': (8.9833, 79.9167),
-    
-    # Eastern Province
-    'Trincomalee': (8.5874, 81.2346),
-    'Batticaloa': (7.7132, 81.7687),
-    'Ampara': (7.3000, 81.6833),
-    
-    # North Central Province
-    'Anuradhapura': (8.3163, 80.4167),
-    'Polonnaruwa': (7.9408, 81.0033),
-    
-    # Sabaragamuwa Province
-    'Ratnapura': (6.6828, 80.4017),
-    'Kegalle': (7.2544, 80.6457),
-    
-    # Uva Province
-    'Badulla': (6.9497, 81.2692),
-    'Monaragala': (6.8167, 81.3500),
+    "colombo":       (6.9271,  79.8612),
+    "kandy":         (7.2906,  80.6337),
+    "galle":         (6.0535,  80.2210),
+    "jaffna":        (9.6615,  80.0255),
+    "anuradhapura":  (8.3114,  80.4037),
+    "nuwara_eliya":  (6.9497,  80.7891),
+    "matara":        (5.9549,  80.5550),
+    "trincomalee":   (8.5874,  81.2152),
+    "batticaloa":    (7.7170,  81.6924),
+    "ratnapura":     (6.6828,  80.3992),
+    "kurunegala":    (7.4863,  80.3647),
+    "badulla":       (6.9934,  81.0550),
+    "hambantota":    (6.1241,  81.1185),
+    "polonnaruwa":   (7.9403,  81.0188),
+    "negombo":       (7.2083,  79.8358),
+    "kalutara":      (6.5854,  79.9607),
+    "ampara":        (7.2966,  81.6747),
+    "vavuniya":      (8.7514,  80.4971),
+    "monaragala":    (6.8728,  81.3507),
+    "kegalle":       (7.2513,  80.3464),
 }
+
+ROAD_DISTANCE_OVERRIDES_KM = {
+    frozenset(("nuwara_eliya", "colombo")): 160.0,
+    frozenset(("colombo", "kandy")): 102.0,
+    frozenset(("colombo", "jaffna")): 390.0,
+}
+
+
+def normalise_city(city: str) -> str:
+    return city.strip().lower().replace(" ", "_").replace("-", "_") if city else ""
+
+
+def get_city_coordinates(city: str) -> Optional[Tuple[float, float]]:
+    return CITY_COORDINATES.get(normalise_city(city))
 
 
 def haversine_distance(city1: str, city2: str) -> float:
@@ -67,11 +65,18 @@ def haversine_distance(city1: str, city2: str) -> float:
     Returns:
         Distance in kilometers
     """
-    if city1 == city2:
+    city1_key = normalise_city(city1)
+    city2_key = normalise_city(city2)
+
+    if city1_key == city2_key:
         return 0.0
+
+    override = ROAD_DISTANCE_OVERRIDES_KM.get(frozenset((city1_key, city2_key)))
+    if override is not None:
+        return override
     
-    coords1 = CITY_COORDINATES.get(city1)
-    coords2 = CITY_COORDINATES.get(city2)
+    coords1 = get_city_coordinates(city1)
+    coords2 = get_city_coordinates(city2)
     
     if not coords1 or not coords2:
         return float('inf')  # Unknown city
@@ -148,7 +153,7 @@ def estimate_travel_time(distance_km: float) -> str:
         return f"{hours:.1f} hours"
 
 
-def get_distance_info(user_city: str, event_city: str) -> Dict[str, any]:
+def get_distance_info(user_city: str, event_city: str) -> Dict[str, Any]:
     """
     Get comprehensive distance information between user and event.
     

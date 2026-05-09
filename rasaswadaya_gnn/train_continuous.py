@@ -40,7 +40,8 @@ from models.gnn_model import RecommendationModel, train_step, evaluate
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-CHECKPOINT_DIR = Path("checkpoints")
+BASE_DIR = Path(__file__).parent
+CHECKPOINT_DIR = BASE_DIR / "checkpoints"
 CHECKPOINT_DIR.mkdir(exist_ok=True)
 
 BEST_MODEL_PATH  = CHECKPOINT_DIR / "best_model.pt"
@@ -51,14 +52,15 @@ METRICS_PATH     = CHECKPOINT_DIR / "training_metrics.json"
 # ─────────────────────────────────────────────────────────────────────────────
 def load_dataset(prefer_large: bool = True) -> dict:
     """Load the largest available dataset."""
-    candidates = [
-        "data/sample_dataset/rasaswadaya_large_dataset.pkl",
-        "data/sample_dataset/rasaswadaya_dataset_with_real_artists.json",
-        "data/sample_dataset/rasaswadaya_dataset_updated.pkl",
-        "data/sample_dataset/rasaswadaya_dataset.pkl",
-    ]
-    for path in candidates:
-        p = Path(path)
+    configured_dataset = os.environ.get("RASASWADAYA_DATASET")
+    candidates = [Path(configured_dataset)] if configured_dataset else []
+    candidates.extend([
+        BASE_DIR / "data" / "sample_dataset" / "rasaswadaya_large_dataset.pkl",
+        BASE_DIR / "data" / "sample_dataset" / "rasaswadaya_dataset_with_real_artists.json",
+        BASE_DIR / "data" / "sample_dataset" / "rasaswadaya_dataset_updated.pkl",
+        BASE_DIR / "data" / "sample_dataset" / "rasaswadaya_dataset.pkl",
+    ])
+    for p in candidates:
         if p.exists():
             print(f"  Loading dataset: {p}")
             if p.suffix == ".pkl":
@@ -227,8 +229,12 @@ def run_training(
     print(f"  {'Epoch':>6}  {'Train Loss':>12}  {'Val Loss':>10}  {'Val Acc':>9}  {'LR':>10}")
     print(f"  {'-'*6}  {'-'*12}  {'-'*10}  {'-'*9}  {'-'*10}")
 
-    all_metrics = load_metrics()
-    best_val_acc = max((m.get("val_acc", 0) for m in all_metrics), default=0.0)
+    if resume_checkpoint is None and label == "full":
+        all_metrics = []
+        best_val_acc = 0.0
+    else:
+        all_metrics = load_metrics()
+        best_val_acc = max((m.get("val_acc", 0) for m in all_metrics), default=0.0)
     patience_counter = 0
     training_start = time.time()
 

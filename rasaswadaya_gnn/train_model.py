@@ -16,18 +16,34 @@ import os
 import json
 from pathlib import Path
 
+BASE_DIR = Path(__file__).parent
+
+
+def resolve_dataset_file() -> Path:
+    configured_dataset = os.environ.get("RASASWADAYA_DATASET")
+    candidates = [Path(configured_dataset)] if configured_dataset else []
+    candidates.extend([
+        BASE_DIR / 'data' / 'sample_dataset' / 'rasaswadaya_large_dataset.pkl',
+        BASE_DIR / 'data' / 'sample_dataset' / 'rasaswadaya_dataset_with_real_artists.json',
+        BASE_DIR / 'data' / 'sample_dataset' / 'rasaswadaya_dataset_updated.pkl',
+        BASE_DIR / 'data' / 'sample_dataset' / 'rasaswadaya_dataset.pkl',
+    ])
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError('No dataset found')
+
+
 # Check if dataset exists
-dataset_file = Path('data/sample_dataset/rasaswadaya_dataset_with_real_artists.json')
-if not dataset_file.exists():
-    dataset_file = Path('data/sample_dataset/rasaswadaya_dataset_updated.json')
-    if not dataset_file.exists():
-        print("❌ No dataset found!")
-        print("\n📝 Please run in order:")
-        print("   1. python3 generate_new_data.py       # Generate dataset")
-        print("   2. python3 integrate_real_artists.py  # Add real artists")
-        print("   3. python3 export_to_csv.py           # Export to CSV")
-        print("   4. python3 train_model.py             # Run this training")
-        exit(1)
+try:
+    dataset_file = resolve_dataset_file()
+except FileNotFoundError:
+    print("❌ No dataset found!")
+    print("\n📝 Please run in order:")
+    print("   1. python3 data/generate_large_dataset.py  # Generate large dataset")
+    print("   2. python3 train_continuous.py --mode full # Train the GNN")
+    print("   3. python3 export_to_db.py                 # Export recommendations")
+    exit(1)
 
 print(f"✅ Dataset found: {dataset_file.name}\n")
 
@@ -62,8 +78,7 @@ print()
 print("=" * 80)
 print(" STEP 1: LOADING DATASET")
 print("=" * 80)
-with open(dataset_file, 'r', encoding='utf-8') as f:
-    dataset = json.load(f)
+dataset = load_dataset(str(dataset_file))
 
 print(f"   ✓ Users: {len(dataset['users'])}")
 print(f"   ✓ Artists: {len(dataset['artists'])}")
@@ -126,8 +141,8 @@ try:
     print()
     print("   Model architecture:")
     print(f"      Input: {encoder.total_dims}D Cultural DNA")
-    print(f"      Hidden: {cfg.model.hidden_dims}D")
-    print(f"      Embedding: {cfg.model.embedding_dims}D")
+    print(f"      Hidden: {cfg.gnn.hidden_channels}D")
+    print(f"      Embedding: {cfg.gnn.out_channels}D")
     print(f"      Task: Link Prediction (User-Artist compatibility)")
     print()
 except Exception as e:

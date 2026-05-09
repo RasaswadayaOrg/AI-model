@@ -53,3 +53,5 @@ checkpoints/
 # Environment variables
 .env
 .env.local
+rasaswadaya_gnn/.env
+rasaswadaya_gnn/data/sample_dataset/rasaswadaya_db_snapshot.*
