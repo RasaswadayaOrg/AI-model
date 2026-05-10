@@ -1,0 +1,42 @@
+# Editor & OS junk
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+
+# Local env
+.env
+.env.local
+.venv/
+venv/
+
+# Logs
+*.log
+uvicorn.log
+
+# Heavy local-only artefacts (Spaces image stays slim)
+data/sample_dataset/rasaswadaya_large_dataset.pkl
+data/sample_dataset/rasaswadaya_large_dataset.json
+data/sample_dataset/csv_export_updated/
+data/sample_dataset/csv_export_updated_real/
+
+# Markdown docs we don't need in the Space image
+*_GUIDE.md
+*_REPORT.md
+*_SUMMARY.md
+*_WORKFLOW.md
+DEMO_*.md
+SYSTEM_*.md
+QUICK*.md
+COMPLETE*.md
+CULTURAL_*.md
+DATASET_*.md
+DISTANCE_*.md
+EXECUTION_*.md
+FAKE_*.md
+GRAPH_*.md
+IMPLEMENTATION_*.md
+RECOMMENDATION_*.md
+REAL_*.md
+USER_*.md
+VISUAL_GUIDE.txt
