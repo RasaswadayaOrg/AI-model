@@ -256,7 +256,14 @@ async def get_recommendations(user_id: str):
         if follow.get("user_id") == user_id
     }
     artist_lookup = {artist.get("artist_id"): artist for artist in dataset.get("artists", [])}
-    artist_candidates = []
+    # Mirror the hard art-form filter that already applies to events: when the
+    # user has explicit art-form preferences, split candidates into in-form
+    # / off-form and only top up from off-form if there aren't enough in-form
+    # matches. Without this an opera singer can still be the top recommendation
+    # for a "kandyan dance" user when their graph cosine happens to be high.
+    preferred_artist_forms = set(user_profile.get("art_interests") or user_profile.get("art_forms") or []) & ART_FORMS
+    in_form_artist_candidates = []
+    off_form_artist_candidates = []
     for idx in range(len(artist_embeddings)):
         artist_id = idx_to_artist[idx]
         if artist_id in user_follows:
@@ -264,9 +271,33 @@ async def get_recommendations(user_id: str):
         graph_score = normalise_cosine_score(float(artist_scores[idx].item()))
         artist = artist_lookup.get(artist_id, {})
         score_val, metadata_score = preference_weighted_score(user_profile, artist, graph_score, city_weight=0.05)
-        artist_candidates.append((score_val, metadata_score, artist_id))
+        artist_forms = set(artist.get("art_forms") or artist.get("art_interests") or []) & ART_FORMS
+        if not artist_forms:
+            cat = str(artist.get("category", "")).strip().lower()
+            if cat in ART_FORMS:
+                artist_forms = {cat}
+        if preferred_artist_forms:
+            # Strict gating: an artist must have at least one matching form.
+            # Unclassified artists go to off-form so they don't sneak in as
+            # "drama matches" when they're really uncategorised.
+            if artist_forms and (artist_forms & preferred_artist_forms):
+                in_form_artist_candidates.append((score_val, metadata_score, artist_id))
+            else:
+                off_form_artist_candidates.append((score_val, metadata_score, artist_id))
+        else:
+            in_form_artist_candidates.append((score_val, metadata_score, artist_id))
 
-    artist_candidates.sort(key=lambda item: item[0], reverse=True)
+    in_form_artist_candidates.sort(key=lambda item: item[0], reverse=True)
+    off_form_artist_candidates.sort(key=lambda item: item[0], reverse=True)
+    if preferred_artist_forms:
+        # When the user picked an explicit art-form, never pollute the list
+        # with off-form artists — better to show fewer cards than wrong ones.
+        artist_candidates = in_form_artist_candidates[:10]
+    else:
+        artist_candidates = in_form_artist_candidates[:10]
+        if len(artist_candidates) < 4:
+            artist_candidates += off_form_artist_candidates[: 4 - len(artist_candidates)]
+
     recommended_artists = []
     for score_val, metadata_score, artist_id in artist_candidates[:10]:
         match_percentage = int(score_val * 100)
@@ -278,7 +309,7 @@ async def get_recommendations(user_id: str):
             "score": round(score_val, 4),
             "semantic_score": round(metadata_score, 4),
             "match_percentage": match_percentage,
-            "reason": f"{match_percentage}% preference-weighted cultural graph artist match"
+            "reason": "Recommended based on your cultural preferences"
         })
         
     # 2. Get Event Recommendations
@@ -303,18 +334,29 @@ async def get_recommendations(user_id: str):
             event = event_lookup.get(event_id, {})
             score_val, metadata_score = preference_weighted_score(user_profile, event, graph_score, city_weight=0.18)
             event_forms = set(event.get("art_forms") or event.get("art_interests") or []) & ART_FORMS
-            if preferred_forms and event_forms and not (event_forms & preferred_forms):
-                off_form_candidates.append((score_val, metadata_score, event_id))
+            if not event_forms:
+                cat = str(event.get("category", "")).strip().lower()
+                if cat in ART_FORMS:
+                    event_forms = {cat}
+            if preferred_forms:
+                if event_forms and (event_forms & preferred_forms):
+                    in_form_candidates.append((score_val, metadata_score, event_id))
+                else:
+                    off_form_candidates.append((score_val, metadata_score, event_id))
             else:
                 in_form_candidates.append((score_val, metadata_score, event_id))
 
         in_form_candidates.sort(key=lambda item: item[0], reverse=True)
         off_form_candidates.sort(key=lambda item: item[0], reverse=True)
-        # Top 5 from in-form; only top up from off-form if the user would
-        # otherwise see fewer than 2 results.
-        event_candidates = in_form_candidates[:5]
-        if len(event_candidates) < 2:
-            event_candidates += off_form_candidates[: 2 - len(event_candidates)]
+        if preferred_forms:
+            # Strict gating: never show off-form events when the user has
+            # explicit preferences. Showing 1 dance event is better than
+            # padding with 4 musicals.
+            event_candidates = in_form_candidates[:5]
+        else:
+            event_candidates = in_form_candidates[:5]
+            if len(event_candidates) < 2:
+                event_candidates += off_form_candidates[: 2 - len(event_candidates)]
 
         for score_val, metadata_score, event_id in event_candidates[:5]:
             match_percentage = int(score_val * 100)
@@ -326,7 +368,7 @@ async def get_recommendations(user_id: str):
                 "score": round(score_val, 4),
                 "semantic_score": round(metadata_score, 4),
                 "match_percentage": match_percentage,
-                "reason": f"{match_percentage}% preference-weighted cultural graph event match"
+                "reason": "Recommended based on your cultural preferences"
             })
 
     flat_recommendations = sorted(

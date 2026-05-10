@@ -55,3 +55,4 @@ checkpoints/
 .env.local
 rasaswadaya_gnn/.env
 rasaswadaya_gnn/data/sample_dataset/rasaswadaya_db_snapshot.*
+rasaswadaya_gnn/uvicorn.log
